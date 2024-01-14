@@ -1,0 +1,137 @@
+body {
+  --heading-font: "Poppins", Georgia, serif;
+  --heading-font-weight: 400;
+  --heading-color: #313131;
+  --heading-line-height: 1.24;
+
+  --swiper-theme-color: #8c907e;
+
+  --bs-primary: #0a74f1;
+  --bs-black: #111;
+  --bs-white: #fff;
+  --bs-light: #f8f8f8;
+  --bs-dark: #313131;
+  --bs-gray: #c5c5c5;
+  --bs-dark-gray: #9d9d9d;
+  --bs-gray-200: #e9eaed;
+  --bs-gray-300: #d7d7d7;
+
+  --bs-primary-rgb: 10, 116, 241;
+  --bs-black-rgb: 17, 17, 17;
+  --bs-white-rgb: 255, 255, 255;
+  --bs-light-rgb: 249, 250, 252;
+  --bs-dark-rgb: 33, 37, 41;
+
+  --bs-link-color: #313131;
+  --bs-link-color-rgb: 17, 17, 17;
+  --bs-link-decoration: underline;
+  --bs-link-hover-color: #313131;
+  --bs-link-hover-color-rgb: 178, 133, 110;
+}
+
+body {
+  letter-spacing: 0.03rem;
+}
+
+body,
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h5,
+h6,
+.h6,
+a,
+a:hover,
+input:focus,
+strong,
+.overflow-x-hidden,
+.fw-medium,
+.fw-semibold,
+.list-group-item,
+.btn,
+.btn-group-lg > .btn,
+.btn-lg,
+.btn-primary,
+.btn.btn-primary:hover,
+.btn.btn-white,
+.btn.btn-white:hover,
+.btn-outline-gray,
+.text-white,
+.text-white .nav-link,
+.text-gray-200,
+.text-dark-gray,
+[data-bs-theme="dark"],
+[data-bs-theme="dark"] .dropdown-menu,
+[data-bs-theme="dark"] .btn-close,
+.text-dark a.nav-link,
+a,
+.preloader,
+.preloader.loaded,
+.my-lg-6,
+.my-lg-7,
+.my-lg-8,
+.my-lg-9,
+.my-lg-10,
+.mt-lg-0,
+.mb-lg-0,
+.px-lg-6,
+.px-lg-7,
+.px-lg-8,
+.px-lg-9,
+.px-lg-10,
+.py-lg-6,
+.py-lg-7,
+.py-lg-8,
+.py-5 my-5,
+.py-lg-10,
+.pt-lg-0,
+.pb-lg-0,
+.border-gray,
+.border-white,
+.border-2,
+.border-3,
+.border-4,
+.border-10,
+.display-1,
+.svg-primary,
+.svg-gray,
+.svg-gray:hover,
+.svg-yellow,
+.svg-white,
+.bg-overlay .overlay-item,
+.site-header,
+.site-header.text-white .logo-light,
+.site-header.text-white .logo-dark,
+.site-header.text-dark .logo-dark,
+.site-header.text-dark .logo-light,
+#intro .content-box,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show,
+.offcanvas.offcanvas-end a,
+#intro .content-box,
+#testimonials .swiper.review-swiper,
+#testimonials .review-swiper .swiper-pagination,
+.swiper-pagination span.swiper-pagination-bullet,
+.swiper-pagination span.swiper-pagination-bullet-active,
+.video-content .player,
+.video-content .player .play-btn,
+.video-content .play-btn:hover,
+#our-products .swiper.product-swiper,
+.subscribe-content button,
+#faqs .accordion-button::after,
+#faqs .accordion-button.collapsed::after,
+#faqs .accordion-button:not(.collapsed)::after,
+#mobile-app .bg-pattern,
+.circle-bg,
+.circle-bg::after,
+.scrollspy-nav,
+.scrollspy-nav .scrollspy-link,
+.scrollspy-nav .scrollspy-indicator,
+.logo,
+.logo-text,
+.icon-box {
+  /* Пустой блок для удаленных стилей */
+}
