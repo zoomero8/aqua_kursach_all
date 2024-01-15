@@ -89,3 +89,21 @@ body {
 }
 
 /* Удалены стили для .circle-bg, .circle-bg::after, .scrollspy-nav, .scrollspy-nav .scrollspy-link, .scrollspy-nav .scrollspy-indicator, и т.д. */
+.main-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0A74F1;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+  position: absolute;
+  top: 10px; /* Расстояние сверху */
+  right: 10px; /* Расстояние справа */
+}
+
+.main-button:hover {
+background-color: #073d7c;
+}

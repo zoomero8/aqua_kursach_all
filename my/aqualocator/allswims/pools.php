@@ -5,8 +5,9 @@ include __DIR__ . '/../aquamap/dbconnector.php';
 // Обработка поиска
 $search = isset($_GET['search']) ? $_GET['search'] : '';
 
-// Запрос к базе данных с учетом поиска
-$query = "SELECT * FROM swimpools WHERE ObjectName LIKE '%$search%'";
+// Запрос к базе данных с учетом поиска по названию и адресу
+$query = "SELECT * FROM swimpools 
+          WHERE ObjectName LIKE '%$search%' OR Address LIKE '%$search%'";
 $result = $mysql->query($query);
 
 // Обработка ошибок при выполнении запроса
@@ -21,6 +22,7 @@ if (!$result) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <a href="../index.php" class="main-button">Назад на главную</a>
     <title>Список бассейнов</title>
 </head>
 <body>
@@ -29,7 +31,7 @@ if (!$result) {
 
     <!-- Форма для поиска -->
     <form action="pools.php" method="get">
-        <label for="search">Поиск по названию бассейна:</label>
+        <label for="search">Поиск по названию бассейна или адресу:</label>
         <input type="text" name="search" id="search" value="<?= htmlspecialchars($search) ?>">
         <button type="submit">Искать</button>
     </form>
@@ -57,8 +59,8 @@ if (!$result) {
         // Закрываем соединение с базой данных
         $mysql->close();
         ?>
-
     </table>
+
 </body>
 <footer id="footer" class="py-lg-7">
       <div class="footer-bottom py-3 text-center">
@@ -69,4 +71,5 @@ if (!$result) {
         </div>
       </div>
     </footer>
+
 </html>
