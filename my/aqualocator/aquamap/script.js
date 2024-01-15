@@ -18,9 +18,10 @@ $(document).ready(function () {
                     // Отображение меток на карте
                     data.forEach(function (pool) {
                         let coordinates = pool.coordinates;
+                        let objectName = pool.objectName;
                         // Создание объекта метки
                         let placemark = new ymaps.Placemark(coordinates.reverse(), {
-                            hintContent: 'Место для вашего контента', // Замените на ваш текст
+                            hintContent: objectName, // Замените на ваш текст
                             iconLayout: 'default#image',
                             iconImageHref: '../images/location-mark.png',
                             iconImageSize: [40, 40],
