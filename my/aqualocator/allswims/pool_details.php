@@ -29,24 +29,39 @@ $mysql->close();
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
+        
 </head>
 
 <body>
-
-<h1 class="swim-title-ones"><?= htmlspecialchars($poolData['ObjectName']) ?></h1>
-<p><strong>Район:</strong> <?= htmlspecialchars($poolData['District']) ?></p>
-<p><strong>Адрес:</strong> <?= htmlspecialchars($poolData['Address']) ?></p>
+<a href="pools.php" class="newmain-button">Назад</a>
+<h1 class="swim-title"><?= htmlspecialchars($poolData['ObjectName']) ?></h1>
 
 <!-- Добавьте другую информацию о бассейне по необходимости -->
 
-<!-- Кнопка "Назад" -->
-<a href="pools.php" class="newmain-button">Назад</a>
+<!-- Таблица для отображения дополнительных данных -->
+<table border="1">
+    <tr>
+        <th>О бассейне</th>
+        <th>Данные</th>
+    </tr>
+    <tr>
+        <td>Район</td>
+        <td><?= htmlspecialchars($poolData['District']) ?></td>
+    </tr>
+    <tr>
+        <td>Адрес</td>
+        <td><?= htmlspecialchars($poolData['Address']) ?></td>
+    </tr>
+    <!-- Добавьте другие строки по необходимости -->
+</table>
 
 </body>
 
-<footer id="footer" class="py-lg-7">
+<footer id="footer" class="footer mt-auto py-lg-7">
     <div class="footer-bottom py-3 text-center">
         <div class="container-lg">
             <p class="m-0">
@@ -55,5 +70,6 @@ $mysql->close();
         </div>
     </div>
 </footer>
+  
 
 </html>

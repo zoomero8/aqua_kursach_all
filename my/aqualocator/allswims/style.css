@@ -1,4 +1,6 @@
 body {
+  margin-top: 60px; /* Равный высоте кнопки */
+  min-height: 300px;
     --heading-font: "Poppins", Georgia, serif;
     --heading-font-weight: 400;
     --heading-color: #313131;
@@ -131,13 +133,13 @@ table {
   background-color: #073d7c;
 }
 
-.swim-title{
+.swim-title {
   text-align: center;
   color: var(--heading-color);
   font-family: var(--heading-font);
   font-weight: var(--heading-font-weight);
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 40px; /* Добавленный отступ снизу */
 }
 table a {
   color: #313131;
@@ -170,9 +172,9 @@ table a:hover::before {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
 .newmain-button {
-  display: block;
-  margin-top: 20px; /* Расстояние между контентом и кнопкой "Назад" */
+  display: inline-block;
   padding: 10px 20px;
   background-color: #0A74F1;
   color: #fff;
@@ -181,17 +183,15 @@ table a:hover::before {
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease-in-out;
+  position: absolute;
+  top: 10px; /* Расстояние сверху */
+  right: 10px; /* Расстояние справа */
 }
 
 .newmain-button:hover {
   background-color: #073d7c;
 }
 
-.swim-title-ones{
-  text-align: center;
-  color: var(--heading-color);
-  font-family: var(--heading-font);
-  font-weight: var(--heading-font-weight);
-  margin-top: 0px;
-  margin-bottom: 20px;
-}
+
+
+
