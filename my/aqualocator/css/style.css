@@ -4,17 +4,27 @@ body {
   --heading-color: #313131;
   --heading-line-height: 1.24;
 
-  --swiper-theme-color: #8c907e;
+  --swiper-theme-color: #8C907E;
 
-  --bs-primary: #0a74f1;
+  /* bootstrap */
+  --bs-body-font-family: "Poppins", Georgia, serif;
+  --bs-body-font-size: 16px;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.9;
+  --bs-body-color: #616161;
+  --bs-body-color-rgb: 1.6, 1.6, 1.6;
+  --bs-body-bg-rgb: 249, 245, 243;
+  --bs-body-bg: #FFF;
+
+  --bs-primary: #0A74F1;
   --bs-black: #111;
   --bs-white: #fff;
   --bs-light: #f8f8f8;
   --bs-dark: #313131;
-  --bs-gray: #c5c5c5;
-  --bs-dark-gray: #9d9d9d;
-  --bs-gray-200: #e9eaed;
-  --bs-gray-300: #d7d7d7;
+  --bs-gray: #C5C5C5;
+  --bs-dark-gray: #9D9D9D;
+  --bs-gray-200: #E9EAED;  
+  --bs-gray-300: #D7D7D7;    
 
   --bs-primary-rgb: 10, 116, 241;
   --bs-black-rgb: 17, 17, 17;
@@ -29,109 +39,53 @@ body {
   --bs-link-hover-color-rgb: 178, 133, 110;
 }
 
-body {
-  letter-spacing: 0.03rem;
+/* Удалены стили для h1, h2, h3, h4, h5, h6, a:hover, input:focus, strong, .overflow-x-hidden, и т.д. */
+
+@media (min-width: 1600px) {
+  .container, .container-lg {
+    max-width: 1550px;
+  }
+  .container-md {
+    max-width: 1430px;
+  }
+  .container {
+    max-width: 1200px;
+  }
 }
 
-body,
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h5,
-h6,
-.h6,
-a,
-a:hover,
-input:focus,
-strong,
-.overflow-x-hidden,
-.fw-medium,
-.fw-semibold,
-.list-group-item,
-.btn,
-.btn-group-lg > .btn,
-.btn-lg,
-.btn-primary,
-.btn.btn-primary:hover,
-.btn.btn-white,
-.btn.btn-white:hover,
-.btn-outline-gray,
-.text-white,
-.text-white .nav-link,
-.text-gray-200,
-.text-dark-gray,
-[data-bs-theme="dark"],
-[data-bs-theme="dark"] .dropdown-menu,
-[data-bs-theme="dark"] .btn-close,
-.text-dark a.nav-link,
-a,
-.preloader,
-.preloader.loaded,
-.my-lg-6,
-.my-lg-7,
-.my-lg-8,
-.my-lg-9,
-.my-lg-10,
-.mt-lg-0,
-.mb-lg-0,
-.px-lg-6,
-.px-lg-7,
-.px-lg-8,
-.px-lg-9,
-.px-lg-10,
-.py-lg-6,
-.py-lg-7,
-.py-lg-8,
-.py-5 my-5,
-.py-lg-10,
-.pt-lg-0,
-.pb-lg-0,
-.border-gray,
-.border-white,
-.border-2,
-.border-3,
-.border-4,
-.border-10,
-.display-1,
-.svg-primary,
-.svg-gray,
-.svg-gray:hover,
-.svg-yellow,
-.svg-white,
-.bg-overlay .overlay-item,
-.site-header,
-.site-header.text-white .logo-light,
-.site-header.text-white .logo-dark,
-.site-header.text-dark .logo-dark,
-.site-header.text-dark .logo-light,
-#intro .content-box,
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link.show,
-.offcanvas.offcanvas-end a,
-#intro .content-box,
-#testimonials .swiper.review-swiper,
-#testimonials .review-swiper .swiper-pagination,
-.swiper-pagination span.swiper-pagination-bullet,
-.swiper-pagination span.swiper-pagination-bullet-active,
-.video-content .player,
-.video-content .player .play-btn,
-.video-content .play-btn:hover,
-#our-products .swiper.product-swiper,
-.subscribe-content button,
-#faqs .accordion-button::after,
-#faqs .accordion-button.collapsed::after,
-#faqs .accordion-button:not(.collapsed)::after,
-#mobile-app .bg-pattern,
-.circle-bg,
-.circle-bg::after,
-.scrollspy-nav,
-.scrollspy-nav .scrollspy-link,
-.scrollspy-nav .scrollspy-indicator,
-.logo,
-.logo-text,
-.icon-box {
-  /* Пустой блок для удаленных стилей */
+/* Удалены стили для .list-group-item, .btn, .btn-group-lg, .btn-primary, .btn-outline-gray, .text-white, .text-gray-200, .text-dark-gray, и т.д. */
+
+[data-bs-theme=dark] {
+  color-scheme: dark;
+  /* Другие стили для темы dark здесь */
 }
+
+/* Удалены стили для .border-gray, .border-white, .border-2, .border-3, .border-4, .border-10, .display-1, и т.д. */
+
+@media (max-width: 1200px) {
+  .navbar-nav .nav-item {
+    border-bottom: 1px solid var(--bs-gray-200);
+    text-align: left;
+    width: 100%;
+  }
+  .navbar-nav .dropdown-menu {
+    border: none;
+  }
+}
+
+@media (max-width: 1340px) {
+  #intro .content-box {
+    top: -114px;
+  }
+}
+
+/* Удалены стили для .homepage-v3, #testimonials .swiper.review-swiper, .swiper-pagination, .swiper-pagination span.swiper-pagination-bullet, .swiper-pagination span.swiper-pagination-bullet-active, .video-content .player, .subscribe-content button, и т.д. */
+
+#faqs .accordion-button::after {
+  background-size: 2.5rem;
+  width: 2rem;
+  height: 2rem;
+  transition: 0.3s ease-in-out;
+}
+
+/* Удалены стили для .circle-bg, .circle-bg::after, .scrollspy-nav, .scrollspy-nav .scrollspy-link, .scrollspy-nav .scrollspy-indicator, и т.д. */

@@ -14,7 +14,8 @@ while ($row = mysqli_fetch_assoc($termsResult)) {
     if ($geoData !== null && json_last_error() == JSON_ERROR_NONE) {
         $pool = array(
             'coordinates' => $geoData['coordinates'],
-            'objectName' => $row['ObjectName']
+            'objectName' => $row['ObjectName'],
+            'address' => $row['Address']
             // Добавьте другие поля, которые вам нужны, например: 'description' => $row['description']
         );
         $pools[] = $pool;

@@ -77,38 +77,18 @@
                 <a
                   class="nav-link text-dark"
                   data-target="products"
-                  href="aquamap/index.html"
+                  href="aquamap/index.php"
                   >Карта бассейнов</a
                 >
               </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link text-dark active dropdown-toggle"
-                    href="#"
-                    id="dropdownPages"
-                    data-bs-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    >Pages</a
-                  >
-                  <div class="dropdown-menu" aria-labelledby="dropdownPages">
-                    <a class="dropdown-item" href="blog.html"
-                      >Blog <span class="badge bg-primary">PRO</span></a
-                    >
-                    <a class="dropdown-item" href="single.html"
-                      >Blog Single <span class="badge bg-primary">PRO</span></a
-                    >
-                    <a class="dropdown-item" href="faqs.html"
-                      >FAQs <span class="badge bg-primary">PRO</span></a
-                    >
-                    <a class="dropdown-item" href="coming-soon.html"
-                      >Coming Soon <span class="badge bg-primary">PRO</span></a
-                    >
-                    <a class="dropdown-item" href="404.html"
-                      >404 Error <span class="badge bg-primary">PRO</span></a
-                    >
-                  </div>
-                </li>
+              <li class="scrollspy-link nav-item">
+                <a
+                  class="nav-link text-dark"
+                  data-target="products"
+                  href="allswims/pools.php"
+                  >Бассейны</a
+                >
+              </li>
                 <li class="scrollspy-link nav-item">
                   <a
                     class="nav-link text-dark"
@@ -225,8 +205,8 @@
       <div class="container-lg">
         <div class="row">
           <div class="display-header mt-0 text-center mb-5">
-            <h2 class="display-3 fw-medium">Contact Us</h2>
-            <p class="fs-5">Contact us for more information.</p>
+            <h2 class="display-3 fw-medium">Наши контакты</h2>
+            <p class="fs-5">Свяжитесь с нами для получения большей информации</p>
           </div>
           <div class="contact-content">
             <div class="row">
@@ -274,19 +254,6 @@
                 </div>
               </div>
             </div>
-            <div class="row mt-5">
-              <div class="col-lg-6 mb-4">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d214586.9753714375!2d-96.89635992812694!3d32.82084512535899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c19f77b45974b%3A0xb9ec9ba4f647678f!2sDallas%2C%20TX%2C%20USA!5e0!3m2!1sen!2snp!4v1696935677426!5m2!1sen!2snp"
-                  height="450"
-                  style="border: 0"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  class="rounded-4 w-100"
-                ></iframe>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -301,8 +268,7 @@
       </div>
     </footer>
 
-
-    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

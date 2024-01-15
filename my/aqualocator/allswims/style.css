@@ -1,0 +1,90 @@
+body {
+    --heading-font: "Poppins", Georgia, serif;
+    --heading-font-weight: 400;
+    --heading-color: #313131;
+    --heading-line-height: 1.24;
+  
+    --swiper-theme-color: #8C907E;
+  
+    /* bootstrap */
+    --bs-body-font-family: "Poppins", Georgia, serif;
+    --bs-body-font-size: 16px;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.9;
+    --bs-body-color: #616161;
+    --bs-body-color-rgb: 1.6, 1.6, 1.6;
+    --bs-body-bg-rgb: 249, 245, 243;
+    --bs-body-bg: #FFF;
+  
+    --bs-primary: #0A74F1;
+    --bs-black: #111;
+    --bs-white: #fff;
+    --bs-light: #f8f8f8;
+    --bs-dark: #313131;
+    --bs-gray: #C5C5C5;
+    --bs-dark-gray: #9D9D9D;
+    --bs-gray-200: #E9EAED;  
+    --bs-gray-300: #D7D7D7;    
+  
+    --bs-primary-rgb: 10, 116, 241;
+    --bs-black-rgb: 17, 17, 17;
+    --bs-white-rgb: 255, 255, 255;
+    --bs-light-rgb: 249, 250, 252;
+    --bs-dark-rgb: 33, 37, 41;
+  
+    --bs-link-color: #313131;
+    --bs-link-color-rgb: 17, 17, 17;
+    --bs-link-decoration: underline;
+    --bs-link-hover-color: #313131;
+    --bs-link-hover-color-rgb: 178, 133, 110;
+  }
+  
+  /* Style for the search form */
+  form {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Enlarged and rounded search input */
+  form input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid var(--bs-gray-200);
+    border-radius: 5px;
+  }
+  
+  /* Style for the search button */
+  form button {
+    padding: 10px 20px;
+    background-color: #0a74f1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 10px; /* Добавлено расстояние между полем и кнопкой */
+  }
+  
+  /* Style for the table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table, th, td {
+    border: 1px solid var(--bs-gray-200);
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: var(--bs-light);
+    color: var(--bs-dark);
+  }
+  
