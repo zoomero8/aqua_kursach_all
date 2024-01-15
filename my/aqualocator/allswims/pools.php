@@ -22,18 +22,22 @@ if (!$result) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
     <a href="../index.php" class="main-button">Назад на главную</a>
-    <title>Список бассейнов</title>
+
 </head>
 <body>
 
-    <h1>Список бассейнов</h1>
 
+<h1 class="swim-title">ВСЕ БАССЕЙНЫ</h1>
     <!-- Форма для поиска -->
     <form action="pools.php" method="get">
-        <label for="search">Поиск по названию бассейна или адресу:</label>
+        <label for="search"></label>
         <input type="text" name="search" id="search" value="<?= htmlspecialchars($search) ?>">
-        <button type="submit">Искать</button>
+        <button type="submit">Поиск</button>
     </form>
 
     <!-- Таблица для отображения результатов -->
@@ -49,7 +53,7 @@ if (!$result) {
         // Отображение результатов запроса
         while ($row = $result->fetch_assoc()) {
             echo "<tr>";
-            echo "<td>" . htmlspecialchars($row['ObjectName']) . "</td>";
+            echo '<td><a href="pool_details.php?pool_id=' . $row['global_id'] . '">' . htmlspecialchars($row['ObjectName']) . '</a></td>';
             echo "<td>" . htmlspecialchars($row['District']) . "</td>";
             echo "<td>" . htmlspecialchars($row['Address']) . "</td>";
             // Добавьте другие ячейки по необходимости

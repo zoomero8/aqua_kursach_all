@@ -100,10 +100,42 @@ body {
   text-decoration: none;
   transition: background-color 0.3s ease-in-out;
   position: absolute;
-  top: 10px; /* Расстояние сверху */
-  right: 10px; /* Расстояние справа */
+  left: 338px;
 }
 
 .main-button:hover {
 background-color: #073d7c;
+}
+table a, #header-nav a {
+  color: #313131;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Эффект при наведении на ссылку или заголовок */
+table a:hover, #header-nav a:hover {
+  color: #0a74f1;
+}
+
+/* Блок с названием бассейна или заголовком при наведении */
+table a::before, #header-nav a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #0a74f1;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Эффект развертывания линии при наведении */
+table a:hover::before, #header-nav a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

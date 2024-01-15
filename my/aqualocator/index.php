@@ -25,16 +25,14 @@
 
 <body>
   <header id="header" class="site-header position-fixed z-2 w-100 border-bottom mb-5">
-    <nav id="header-nav" class="navbar navbar-expand-lg py-3">
+    <nav id="header-nav" class="navbar navbar-expand-lg py-2">
       <div class="container-lg">
         <a class="navbar-brand pb-4" href="index.php">
           <div class="logo">
             <span class="logo-text">AQUA NAVIGATOR</span>
           </div>
         </a>
-        <button class="navbar-toggler d-flex d-lg-none order-3 p-2 border-0 shadow-none bg-white" type="button"
-          data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false"
-          aria-label="Toggle navigation">
+        <button class="navbar-toggler d-flex d-lg-none order-3 p-2 border-0 shadow-none bg-white" type="button">
           <svg class="navbar-icon" width="50" height="50">
             <use xlink:href="#navbar-icon"></use>
           </svg>
@@ -64,7 +62,7 @@
   </header>
   <section id="intro" class="scrollspy-section py-5">
     <div class="container-lg">
-      <div class="row align-items-center text-center py-5 mt-5">
+      <div class="row align-items-center text-center py-4 mt-4">
         <div class="col-lg-6 mb-5">
           <h1 class="display-1 fw-bold" data-aos="fade-up" data-aos-delay="200">
             AQUA Navigator
