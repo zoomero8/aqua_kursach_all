@@ -22,6 +22,7 @@ $(document).ready(function () {
                     map.controls.remove('zoomControl'); // удаляем контрол зуммирования
                     map.controls.remove('rulerControl'); // удаляем контрол правил
                     // map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+                    
 
                     // Отображение меток на карте
                     data.forEach(function (pool) {

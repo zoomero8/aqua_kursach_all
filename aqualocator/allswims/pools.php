@@ -5,9 +5,18 @@ include __DIR__ . '/../aquamap/dbconnector.php';
 // Обработка поиска
 $search = isset($_GET['search']) ? $_GET['search'] : '';
 
-// Запрос к базе данных с учетом поиска по названию и адресу
+// Обработка фильтрации по инвалидам
+$showDisabilityFriendly = isset($_GET['disability_friendly']) ? $_GET['disability_friendly'] : '';
+
+// Запрос к базе данных с учетом поиска по названию, адресу и району
 $query = "SELECT * FROM swimpools 
-          WHERE ObjectName LIKE '%$search%' OR Address LIKE '%$search%' OR District LIKE '%$search%'";
+          WHERE (ObjectName LIKE '%$search%' OR Address LIKE '%$search%' OR District LIKE '%$search%')";
+
+// Добавляем условие для фильтрации по полю DisabilityFriendly, если кнопка нажата
+if ($showDisabilityFriendly == 'true') {
+    $query .= " AND DisabilityFriendly = 'приспособлен для всех групп инвалидов'";
+}
+
 $result = $mysql->query($query);
 
 // Обработка ошибок при выполнении запроса
@@ -29,21 +38,36 @@ if (!$result) {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
         
+    <!-- Добавляем скрипт для фильтрации по инвалидам -->
+    <script>
+        function filterDisabilityFriendly() {
+            var showDisabilityFriendly = document.getElementById('showDisabilityFriendly').checked;
+
+            // Обновляем URL с новым параметром
+            var url = new URL(window.location.href);
+            url.searchParams.set('disability_friendly', showDisabilityFriendly);
+            window.location.href = url.href;
+        }
+    </script>
 </head>
 <body>
 <a href="../index.php" class="newmain-button">Назад</a>
-
 
 <h1 class="swim-title">ВСЕ БАССЕЙНЫ</h1>
     <!-- Форма для поиска -->
     <form action="pools.php" method="get">
         <label for="search"></label>
-        <input type="text" name="search" id="search" value="<?= htmlspecialchars($search) ?>">
+        <input type="text" name="search" id="search" value="<?= htmlspecialchars($search) ?>" placeholder="Поиск по названию или адресу">
         <button type="submit">Поиск</button>
     </form>
-
+    <div class="position-static text-center">
+    <input type="checkbox" class="form-check-input" id="showDisabilityFriendly" onchange="filterDisabilityFriendly()"
+                    <?php echo $showDisabilityFriendly == 'true' ? 'checked' : ''; ?>>
+                <label class="form-check-label" for="showDisabilityFriendly">Для пользователей с ограниченными возможностями</label>
+    </div>
+   
     <!-- Таблица для отображения результатов -->
-    <table border="1">
+    <table border="1" >
         <tr>
             <th>Название спортивного комплекса</th>
             <th>Район</th>

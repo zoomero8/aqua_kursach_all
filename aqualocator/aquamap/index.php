@@ -26,7 +26,7 @@ $termsResult = mysqli_query($mysql, $termsQuery);
 <body>
 	<h1 class="map-title">КАРТА БАССЕЙНОВ</h1> <!-- Добавлен заголовок -->
 	<div id="map-test" class="map"></div>
-	<a href="../index.php" class="main-button">Назад на главную</a>
+	<a href="../index.php" class="main-button">Назад</a>
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=7151535c-198c-4f28-af73-23eab7883cff&lang=ru_RU">
 	</script>
 	<script src="script.js"></script>
