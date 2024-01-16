@@ -49,12 +49,12 @@ include __DIR__ . '/../registration/session.php';
             if (isLoggedIn()) {
               // Если пользователь вошел в аккаунт, отображаем кнопку "ЛИЧНЫЙ КАБИНЕТ"
               echo '<li class="scrollspy-link nav-item">
-                      <a class="nav-link text-dark" href="personal_cabinet.php">Личный кабинет</a>
+                      <a class="nav-link text-dark" href="personal_account.php">Личный кабинет</a>
                     </li>';
             } else {
               // Если пользователь не вошел в аккаунт, оставляем код без изменений
               echo '<li class="scrollspy-link nav-item">
-                      <a class="nav-link text-dark" data-target="products" href="../registration/index.html">Аккаунт</a>
+                      <a class="nav-link text-dark" data-target="products" href="../registration/index.php">Аккаунт</a>
                     </li>';
             }
             ?>

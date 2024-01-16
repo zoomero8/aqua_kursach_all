@@ -1,6 +1,7 @@
 <?php
 // Подключаем файл dbconnector.php
 include __DIR__ . '/../aquamap/dbconnector.php';
+include __DIR__ . '/../registration/session.php';
 
 // Обработка поиска
 $search = isset($_GET['search']) ? $_GET['search'] : '';
@@ -52,7 +53,7 @@ if (!$result) {
 </head>
 
 <body class="mt-5">
-<a href="..main/index.php" class="newmain-button">Назад</a>
+<a href="../main/index.php" class="newmain-button">Главная</a>
 <a href="../aquamap/index.php" class="map-main-button">К карте</a>
 
 <h1 class="display-2 text-center mx-auto" data-aos="fade-up" data-aos-delay="200">

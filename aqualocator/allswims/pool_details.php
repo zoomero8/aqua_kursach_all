@@ -1,5 +1,6 @@
 <?php
 include __DIR__ . '/../aquamap/dbconnector.php';
+include __DIR__ . '/../registration/session.php';
 
 // Получаем идентификатор бассейна из URL
 $poolId = isset($_GET['pool_id']) ? $_GET['pool_id'] : '';
@@ -37,7 +38,7 @@ $mysql->close();
 </head>
 
 <body class="mt-5">
-    <a href="pools.php" class="newmain-button">Назад</a>
+    <a href="pools.php" class="newmain-button">Все бассейны</a>
     <a href="../aquamap/index.php" class="map-main-button">К карте</a>
     <h1 class="display-2 text-center mx-auto fs-2" data-aos="fade-up" data-aos-delay="200">
     <?= htmlspecialchars($poolData['ObjectName'] ?? '', ENT_QUOTES, 'UTF-8') ?>

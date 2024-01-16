@@ -1,5 +1,6 @@
 <?php
 include "dbconnector.php";
+include __DIR__ . '/../registration/session.php';
 
 $termsQuery = "SELECT * FROM swimpools";
 $termsResult = mysqli_query($mysql, $termsQuery);
@@ -22,7 +23,7 @@ $termsResult = mysqli_query($mysql, $termsQuery);
   
 </head>
 <body>
-<a href="..main/index.php" class="newmain-button">Назад</a>
+<a href="../main/index.php" class="newmain-button">Назад</a>
 <h1 class="display-2 text-center mx-auto" data-aos="fade-up" data-aos-delay="200">
     Карта бассейнов
 </h1>
