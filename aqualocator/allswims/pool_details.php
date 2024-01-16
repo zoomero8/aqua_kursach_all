@@ -39,7 +39,8 @@ $mysql->close();
 <body>
     <a href="pools.php" class="newmain-button">Назад</a>
     <h1 class="swim-title">
-        <?= htmlspecialchars($poolData['ObjectName']) ?>
+    <?= htmlspecialchars($poolData['ObjectName'] ?? '', ENT_QUOTES, 'UTF-8') ?>
+
     </h1>
     <table border="1">
         <tr>
@@ -49,55 +50,56 @@ $mysql->close();
         <tr>
     <td>График работы</td>
     <td>
-        <?php
-        // Разбиваем строку на отдельные дни
-        $workingHours = explode(',', $poolData['WorkingHoursWinter']);
+    <?php
+    // Разбиваем строку на отдельные дни
+    $workingHours = explode(',', $poolData['WorkingHoursWinter'] ?? '');
 
-        // Выводим график работы для каждого дня
-        foreach ($workingHours as $daySchedule) {
-            // Разбиваем информацию о дне (название и часы)
-            $dayInfo = explode(' ', $daySchedule);
+    // Выводим график работы для каждого дня
+    foreach ($workingHours as $daySchedule) {
+        // Разбиваем информацию о дне (название и часы)
+        $dayInfo = explode(' ', $daySchedule);
 
-            // Выводим информацию
-            echo '<p><strong>' . htmlspecialchars($dayInfo[0]) . ':</strong> ' . htmlspecialchars($dayInfo[1]) . '</p>';
-        }
-        ?>
-    </td>
+        // Выводим информацию
+        echo '<p><strong>' . htmlspecialchars($dayInfo[0] ?? '') . ':</strong> ' . htmlspecialchars($dayInfo[1] ?? '') . '</p>';
+    }
+    ?>
+</td>
+
 </tr>
         <tr>
             <td>Район</td>
             <td>
-                <?= htmlspecialchars($poolData['District']) ?>
+            <?= htmlspecialchars($poolData['District'] ?? '', ENT_QUOTES, 'UTF-8') ?>
             </td>
         </tr>
         <tr>
             <td>Адрес</td>
             <td>
-                <?= htmlspecialchars($poolData['Address']) ?>
+            <?= htmlspecialchars($poolData['Address'] ?? '', ENT_QUOTES, 'UTF-8') ?>
             </td>
         </tr>
         <tr>
             <td>Почта</td>
             <td>
-                <?= htmlspecialchars($poolData['Email']) ?>
+            <?= htmlspecialchars($poolData['Email'] ?? '', ENT_QUOTES, 'UTF-8') ?>
             </td>
         </tr>
         <tr>
             <td>Ссылка на сайт</td>
             <td>
-                <?= htmlspecialchars($poolData['WebSite']) ?>
+            <?= htmlspecialchars($poolData['WebSite'] ?? '', ENT_QUOTES, 'UTF-8') ?>
             </td>
         </tr>
         <tr>
             <td>Номер телефона</td>
             <td>
-                <?= '+7 ' . htmlspecialchars($poolData['HelpPhone']) ?>
+            <?= '+7 ' . htmlspecialchars($poolData['HelpPhone'] ?? '', ENT_QUOTES, 'UTF-8') ?>
             </td>
         </tr>
         <tr>
             <td>Приспособленность для занятий инвалидов</td>
             <td>
-                <?= htmlspecialchars($poolData['DisabilityFriendly']) ?>
+            <?= htmlspecialchars($poolData['DisabilityFriendly'] ?? '', ENT_QUOTES, 'UTF-8') ?>
             </td>
         </tr>
     </table>

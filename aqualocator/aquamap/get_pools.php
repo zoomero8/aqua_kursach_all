@@ -13,6 +13,7 @@ while ($row = mysqli_fetch_assoc($termsResult)) {
     // Проверка на null и ошибки декодирования JSON
     if ($geoData !== null && json_last_error() == JSON_ERROR_NONE) {
         $pool = array(
+            'global_id' => $row['global_id'],
             'coordinates' => $geoData['coordinates'],
             'objectName' => $row['ObjectName'],
             'address' => $row['Address']
