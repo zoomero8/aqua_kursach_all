@@ -7,7 +7,7 @@ $search = isset($_GET['search']) ? $_GET['search'] : '';
 
 // Запрос к базе данных с учетом поиска по названию и адресу
 $query = "SELECT * FROM swimpools 
-          WHERE ObjectName LIKE '%$search%' OR Address LIKE '%$search%'";
+          WHERE ObjectName LIKE '%$search%' OR Address LIKE '%$search%' OR District LIKE '%$search%'";
 $result = $mysql->query($query);
 
 // Обработка ошибок при выполнении запроса
@@ -22,17 +22,16 @@ if (!$result) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" type="text/css"
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
-    
-    <a href="../index.php" class="main-button">Назад на главную</a>
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+        
 </head>
 <body>
+<a href="../index.php" class="newmain-button">Назад</a>
 
 
 <h1 class="swim-title">ВСЕ БАССЕЙНЫ</h1>
@@ -69,15 +68,14 @@ if (!$result) {
     </table>
 
 </body>
-<footer id="footer" class="footer mt-auto py-lg-7">
-    <div class="footer-bottom py-3 text-center">
+<footer id="footer" class="py-lg-7">
+      <div class="footer-bottom py-3 text-center">
         <div class="container-lg">
-            <p class="m-0">
-                © 2024 AQUA Navigator.
-            </p>
+          <p class="m-0">
+            © 2024 AQUA Navigator.
+          </p>
         </div>
-    </div>
-</footer>
-  
+      </div>
+    </footer>
 
 </html>
