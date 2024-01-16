@@ -5,7 +5,6 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh; /* Занимает 100% высоты видимой области экрана */
-    
 }
 
 .map {
@@ -43,20 +42,21 @@ body {
 		margin-top: 10px;
 		margin-bottom: 20px;
 	}
-	.main-button {
-		position: absolute;
-		top: 10px; /* Расстояние сверху */
-		right: 10px; /* Расстояние справа */
+	.newmain-button {
+		display: inline-block;
 		padding: 10px 20px;
-		background-color: #0a74f1;
+		background-color: #0A74F1;
 		color: #fff;
 		border: none;
 		border-radius: 5px;
 		cursor: pointer;
 		text-decoration: none;
-		display: inline-block;
-	}
-	
-	.main-button:hover {
-		background-color: #095fcb;
-	}
+		transition: background-color 0.3s ease-in-out;
+		position: absolute;
+		top: 10px; /* Расстояние сверху */
+		right: 10px; /* Расстояние справа */
+	  }
+	  
+	  .newmain-button:hover {
+		background-color: #073d7c;
+	  }

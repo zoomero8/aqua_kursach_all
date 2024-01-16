@@ -50,10 +50,15 @@ if (!$result) {
         }
     </script>
 </head>
-<body>
-<a href="../index.php" class="newmain-button">Назад</a>
 
-<h1 class="swim-title">ВСЕ БАССЕЙНЫ</h1>
+<body class="mt-5">
+<a href="../index.php" class="newmain-button">Назад</a>
+<a href="../aquamap/index.php" class="map-main-button">К карте</a>
+
+<h1 class="display-2 text-center mx-auto" data-aos="fade-up" data-aos-delay="200">
+    Все бассейны
+</h1>
+
     <!-- Форма для поиска -->
     <form action="pools.php" method="get">
         <label for="search"></label>

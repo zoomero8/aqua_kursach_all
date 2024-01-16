@@ -36,12 +36,13 @@ $mysql->close();
 
 </head>
 
-<body>
+<body class="mt-5">
     <a href="pools.php" class="newmain-button">Назад</a>
-    <h1 class="swim-title">
+    <a href="../aquamap/index.php" class="map-main-button">К карте</a>
+    <h1 class="display-2 text-center mx-auto fs-2" data-aos="fade-up" data-aos-delay="200">
     <?= htmlspecialchars($poolData['ObjectName'] ?? '', ENT_QUOTES, 'UTF-8') ?>
+</h1>
 
-    </h1>
     <table border="1">
         <tr>
             <th>О бассейне</th>
@@ -64,7 +65,12 @@ $mysql->close();
     }
     ?>
 </td>
-
+<tr>
+            <td>Вид бассейна</td>
+            <td>
+            <?= htmlspecialchars($poolData['NameWinter'] ?? '', ENT_QUOTES, 'UTF-8') ?>
+            </td>
+        </tr>
 </tr>
         <tr>
             <td>Район</td>
