@@ -1,20 +1,17 @@
+<?php
+include __DIR__ . '/../registration/session.php';
+?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
-  <title>aquanavigator</title>
+  <title>AQUAnavigator</title>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="author" content="" />
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" type="text/css"
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -23,7 +20,7 @@
 
 <body>
   <header id="header" class="site-header position-fixed z-2 w-100 border-bottom mb-5">
-    <nav id="header-nav" class="navbar navbar-expand-lg py-2">
+    <nav id="header-nav" class="navbar navbar-expand-lg py-2 bg-white">
       <div class="container-lg">
         <a class="navbar-brand pb-4" href="index.php">
           <div class="logo">
@@ -43,14 +40,24 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav scrollspy-nav justify-content-end flex-grow-1 gap-lg-5 pe-3">
               <li class="scrollspy-link nav-item">
-                <a class="nav-link text-dark" data-target="products" href="aquamap/index.php">Карта бассейнов</a>
+                <a class="nav-link text-dark" data-target="products" href="../aquamap/index.php">Карта бассейнов</a>
               </li>
               <li class="scrollspy-link nav-item">
-                <a class="nav-link text-dark" data-target="products" href="allswims/pools.php">Бассейны</a>
+                <a class="nav-link text-dark" data-target="products" href="../allswims/pools.php">Бассейны</a>
               </li>
-              <li class="scrollspy-link nav-item">
-                <a class="nav-link text-dark" data-target="products" href="registration/index.html">Аккаунт</a>
-              </li>
+              <?php
+            if (isLoggedIn()) {
+              // Если пользователь вошел в аккаунт, отображаем кнопку "ЛИЧНЫЙ КАБИНЕТ"
+              echo '<li class="scrollspy-link nav-item">
+                      <a class="nav-link text-dark" href="personal_cabinet.php">Личный кабинет</a>
+                    </li>';
+            } else {
+              // Если пользователь не вошел в аккаунт, оставляем код без изменений
+              echo '<li class="scrollspy-link nav-item">
+                      <a class="nav-link text-dark" data-target="products" href="../registration/index.html">Аккаунт</a>
+                    </li>';
+            }
+            ?>
               <span class="scrollspy-indicator"></span>
             </ul>
           </div>
@@ -68,10 +75,10 @@
           <p class="lead my-4" data-aos="fade-up" data-aos-delay="400">
             Бассейны Вашего Города.
           </p>
-          <a href="allswims/pools.php" class="main-button">Перейти к сервису</a>
+          <a href="../allswims/pools.php" class="main-button">Перейти к сервису</a>
         </div>
         <div class="col-lg-6">
-          <img src="images/water-deep.png" alt="banner-image" class="rounded-4 img-fluid" data-aos="fade-up"
+          <img src="../images/water-deep.png" alt="banner-image" class="rounded-4 img-fluid" data-aos="fade-up"
             style="max-width: 85%;" />
         </div>
       </div>
@@ -199,12 +206,6 @@
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

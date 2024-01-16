@@ -19,9 +19,10 @@ $termsResult = mysqli_query($mysql, $termsQuery);
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  
 </head>
 <body>
-<a href="../index.php" class="newmain-button">Назад</a>
+<a href="..main/index.php" class="newmain-button">Назад</a>
 <h1 class="display-2 text-center mx-auto" data-aos="fade-up" data-aos-delay="200">
     Карта бассейнов
 </h1>

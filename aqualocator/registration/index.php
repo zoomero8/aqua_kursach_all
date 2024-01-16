@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title></title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'><link rel="stylesheet" href="./style.css">
-  
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -16,25 +15,26 @@
 <body>
 <h2></h2>
 <div class="container" id="container">
-	<div class="form-container sign-up-container">
-		<form action="#">
-			<h1>Регистрация</h1>
-			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-google"></i></a>
-				<a href="#" class="social"><i class="fab fa-vk"></i></a>
-			</div>
-			<span>или используйте почту для регистрации</span>
-			<input type="text" placeholder="Имя" />
-			<input type="email" placeholder="Почта" />
-			<input type="password" placeholder="Пароль" />
-			<button>Создать</button>
-		</form>
-	</div>
+    <div class="form-container sign-up-container">
+        <form action="register.php" method="POST"> <!-- Обновленный атрибут action и method -->
+            <h1>Регистрация</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-google"></i></a>
+                <a href="#" class="social"><i class="fab fa-vk"></i></a>
+            </div>
+            <span>или используйте почту для регистрации</span>
+			<input type="text" name="login" placeholder="Логин" />
+            <input type="email" name="email" placeholder="Почта" />
+            <input type="password" name="password" placeholder="Пароль" />
+			<input type="text" name="name" placeholder="ФИО" />
+            <button type="submit" name="register">Создать</button>
+        </form>
+    </div>
 	<div class="form-container sign-in-container">
-		<form action="#">
+		<form action="login.php" method="POST">
 			<h1>Вход</h1>
-			<input type="email" placeholder="Почта" />
-			<input type="password" placeholder="Пароль" />
+			<input type="text" name="login" placeholder="Логин" />
+			<input type="password" name="password" placeholder="Пароль" />
 			<a href="#">Забыли свой пароль?</a>
 			<button>Войти</button>
 			<div class="social-container">

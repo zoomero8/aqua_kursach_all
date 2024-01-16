@@ -10,7 +10,7 @@ $(document).ready(function () {
                 } else {
                     let map = new ymaps.Map('map-test', {
                         center: [55.753656, 37.628137],
-                        zoom: 10
+                        zoom: 12
                     });
                     map.controls.remove('geolocationControl');
                     map.controls.remove('trafficControl');
