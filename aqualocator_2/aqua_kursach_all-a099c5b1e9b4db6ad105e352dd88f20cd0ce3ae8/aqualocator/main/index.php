@@ -41,9 +41,27 @@
               <li class="scrollspy-link nav-item">
                 <a class="nav-link text-dark" data-target="products" href="../allswims/pools.php">Бассейны</a>
               </li>
-              <li class="scrollspy-link nav-item">
-                <a class="nav-link text-dark" data-target="products" href="../registration/index.html">Аккаунт</a>
-              </li>
+              <?php
+          include __DIR__ . '/../registration/session.php';
+
+          if (isLoggedIn()) {
+            // Если пользователь вошел в аккаунт, отобразите кнопку "Личный кабинет" и "Выйти"
+            echo '<li class="scrollspy-link nav-item">
+                    <a class="nav-link text-dark" href="../registration/user_profile.php">Личный кабинет</a>
+                  </li>';
+            echo '<li class="scrollspy-link nav-item">
+                    <a class="nav-link text-dark" href="../registration/logout.php">Выйти</a>
+                  </li>';
+          } else {
+            // Если пользователь не вошел в аккаунт, отобразите кнопки "Войти" и "Зарегистрироваться"
+            echo '<li class="scrollspy-link nav-item">
+                    <a class="nav-link text-dark" data-target="products" href="../registration/sign_main.php">Войти</a>
+                  </li>';
+            echo '<li class="scrollspy-link nav-item">
+                    <a class="nav-link text-dark" data-target="products" href="../registration/registr_main.php">Зарегистрироваться</a>
+                  </li>';
+          }
+          ?>
               <span class="scrollspy-indicator"></span>
             </ul>
           </div>

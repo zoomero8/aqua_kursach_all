@@ -1,0 +1,178 @@
+body {
+    --heading-font: "Poppins", Georgia, serif;
+    margin-top: 60px; /* Равный высоте кнопки */
+    min-height: 300px;
+    }
+    
+    /* Style for the search form */
+    form {
+      margin: 20px auto; /* Устанавливаем отступы сверху и снизу, а также центрируем форму по горизонтали */
+      display: flex;
+      justify-content: center; /* Центрируем по горизонтали */
+      align-items: center;
+  }
+    
+    /* Enlarged and rounded search input */
+    form input[type="text"] {
+      width: 300px;
+      padding: 10px;
+      border: 2px solid #0a74f1;
+      border-radius: 5px;
+  }
+    
+    /* Style for the search button */
+    form button {
+      padding: 10px 20px;
+      background-color: #0a74f1;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease-in-out;
+      margin-left: 10px;
+  }
+  form button:hover {
+    background-color: #073d7c;
+  }
+    
+  /* Обновленный стиль для таблицы с закругленными краями */
+  table {
+    width: 80%; /* Устанавливаем ширину таблицы */
+    margin: 20px auto; /* Устанавливаем отступы сверху и снизу, а также центрируем таблицу по горизонтали */
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+    
+    th, td {
+      padding: 15px;
+      text-align: left;
+    }
+    
+    th {
+      background-color: var(--bs-light);
+      color: var(--bs-dark);
+    }
+    
+    /* Стиль для заголовка таблицы */
+    thead {
+      background-color: var(--bs-light);
+      border-bottom: 2px solid var(--bs-gray-200);
+    }
+    
+    /* Стиль для строк с четными номерами */
+    tbody tr:nth-child(even) {
+      background-color: var(--bs-light-rgb);
+    }
+    
+    /* Стиль для строк с нечетными номерами */
+    tbody tr:nth-child(odd) {
+      background-color: var(--bs-white-rgb);
+    }
+    
+    /* Стиль для последней строки таблицы */
+    tbody tr:last-child {
+      border-bottom-left-radius: 0; /* Используем более маленький радиус у последней строки */
+      border-bottom-right-radius: 0; /* Используем более маленький радиус у последней строки */
+  }
+    .main-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #0A74F1;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease-in-out;
+      position: absolute;
+      top: 10px; /* Расстояние сверху */
+      right: 10px; /* Расстояние справа */
+  }
+  
+  .main-button:hover {
+    background-color: #073d7c;
+  }
+  
+  .swim-title {
+    text-align: center;
+    color: var(--heading-color);
+    font-family: var(--heading-font);
+    font-weight: var(--heading-font-weight);
+    margin-top: 10px;
+    margin-bottom: 40px; /* Добавленный отступ снизу */
+  }
+  table a {
+    color: #313131;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* Эффект при наведении на ссылку */
+  table a:hover {
+    color: #0a74f1;
+  }
+  
+  table a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #0a74f1;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  table a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  .newmain-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0A74F1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    position: absolute;
+    top: 10px; /* Расстояние сверху */
+    right: 10px; /* Расстояние справа */
+  }
+  
+  .newmain-button:hover {
+    background-color: #073d7c;
+  }
+  
+  .map-main-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0A74F1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    position: absolute;
+    top: 10px; /* Расстояние сверху */
+    left: 10px; /* Расстояние слева */
+  }
+  
+  .map-main-button:hover {
+    background-color: #073d7c;
+  }
+  
+  
+  
