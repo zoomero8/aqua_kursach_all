@@ -108,22 +108,58 @@ $poolData = $result->fetch_assoc();
         </tr>
     </table>
     <?php
+    // Инициализируем $isFavorite значением false
+    $isFavorite = false;
+
     // Проверяем, авторизован ли пользователь
     if (isLoggedIn()) {
         // Получаем данные пользователя
         $userData = getUserData();
-    
+
         // Проверяем, есть ли бассейн в избранном у пользователя
         $isFavorite = $userData && in_array($poolId, $userData['favoritePools']);
+    }
     ?>
-        <!-- Выводим соответствующую кнопку в зависимости от статуса избранного -->
-        <?php if ($isFavorite) : ?>
-            <button class="btn btn-danger">Удалить из избранного</button>
-        <?php else : ?>
-            <button class="btn btn-success">Добавить в избранное</button>
+    <?php if (isLoggedIn()): ?>
+        <?php if ($isFavorite): ?>
+            <button class="btn btn-danger remove-from-favorites" data-pool-id="<?= $poolId ?>">Удалить из избранного</button>
+        <?php else: ?>
+            <button class="btn btn-success add-to-favorites" data-pool-id="<?= $poolId ?>">Добавить в избранное</button>
         <?php endif; ?>
-    <?php } ?>
+    <?php endif; ?>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.add-to-favorites').click(function () {
+            var poolId = $(this).data('pool-id');
+            $.post('add_favorite.php', { pool_id: poolId }, function (data) {
+                if (data === 'success') {
+                    // Успешно добавлено в избранное, обновите страницу или выполните другие действия
+                    location.reload();
+                } else {
+                    // Ошибка добавления в избранное
+                    console.error(data);
+                }
+            });
+        });
+
+        $('.remove-from-favorites').click(function () {
+            var poolId = $(this).data('pool-id');
+            $.post('remove_favorite.php', { pool_id: poolId }, function (data) {
+                if (data === 'success') {
+                    // Успешно удалено из избранного, обновите страницу или выполните другие действия
+                    location.reload();
+                } else {
+                    // Ошибка удаления из избранного
+                    console.error(data);
+                }
+            });
+        });
+    });
+</script>
+
+
 
 <footer id="footer" class="footer mt-auto py-lg-7">
     <div class="footer-bottom py-3 text-center">
