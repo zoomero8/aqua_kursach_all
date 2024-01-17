@@ -31,8 +31,7 @@ function getUserData() {
         // Подготовленный запрос для получения данных пользователя, избранных бассейнов и данных о бассейнах
         $stmt = $mysql->prepare("
             SELECT u.id, u.login, u.name, u.email, f.poolId,
-                   p.global_id, p.ObjectName, p.NameWinter, p.PhotoWinter,
-                   p.AdmArea, p.District, p.Address, p.Email, p.WebSite, p.HelpPhone
+                   p.global_id, p.ObjectName
             FROM swimpools_users u
             LEFT JOIN FavoritePools f ON u.id = f.userId
             LEFT JOIN Swimpools p ON f.poolId = p.global_id
@@ -40,28 +39,24 @@ function getUserData() {
         ");
         $stmt->bind_param("i", $userId);
         $stmt->execute();
-        $stmt->bind_result($id, $login, $name, $email, $poolId, $globalId, $objectName, $nameWinter, $photoWinter, $admArea, $district, $address, $poolEmail, $webSite, $helpPhone);
+        $stmt->bind_result($id, $login, $name, $email, $poolId, $globalId, $objectName);
 
         $userData = [];
         while ($stmt->fetch()) {
-            $userData = [
-                'id' => $id,
-                'login' => $login,
-                'name' => $name,
-                'email' => $email,
-                'favoritePools' => isset($userData['favoritePools']) ? array_unique([...$userData['favoritePools'], $poolId]) : [$poolId],
-                'swimpools' => [
-                    'globalId' => $globalId,
-                    'objectName' => $objectName,
-                    'nameWinter' => $nameWinter,
-                    'photoWinter' => $photoWinter,
-                    'admArea' => $admArea,
-                    'district' => $district,
-                    'address' => $address,
-                    'poolEmail' => $poolEmail,
-                    'webSite' => $webSite,
-                    'helpPhone' => $helpPhone,
-                ],
+            $userData['id'] = $id;
+            $userData['login'] = $login;
+            $userData['name'] = $name;
+            $userData['email'] = $email;
+
+            if (isset($userData['favoritePools'])) {
+                $userData['favoritePools'][] = $poolId;
+            } else {
+                $userData['favoritePools'] = [$poolId];
+            }
+
+            $userData['swimpools'][] = [
+                'global_id' => $globalId,
+                'objectName' => $objectName,
             ];
         }
 

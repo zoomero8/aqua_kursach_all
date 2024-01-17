@@ -60,12 +60,14 @@ $userData = getUserData(); // Предположим, что у вас есть 
 
 <div class="container">
     <div class="right-column">
-        <h2>Ваши бассейны</h2>
+    <h1 class="display-2 mx-auto fs-2" data-aos="fade-up" data-aos-delay="200">Избранные бассейны</h1>
         <?php if (!empty($userData['swimpools'])): ?>
-            <!-- Здесь вы можете вывести информацию о каждом бассейне -->
-            <p>
-                <?= $userData['swimpools']['objectName'] ?>
-            </p>
+            <!-- Используйте цикл для вывода информации о каждом бассейне -->
+            <?php foreach ($userData['swimpools'] as $swimpool): ?>
+                <p>
+                    <?= $swimpool['objectName'] ?>
+                </p>
+            <?php endforeach; ?>
         <?php else: ?>
             <p>Вы еще не добавили бассейны.</p>
         <?php endif; ?>
