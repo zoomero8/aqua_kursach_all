@@ -110,7 +110,7 @@ $userData = getUserData(); // Предположим, что у вас есть 
 </script>
 
 
-<footer id="footer" class="footer mt-auto py-lg-7">
+<footer id="footer" class="footer mt-auto py-lg-7 fixed-bottom">
     <div class="footer-bottom py-3 text-center">
         <div class="container-lg">
             <p class="m-0">

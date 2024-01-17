@@ -199,7 +199,7 @@
       </div>
     </div>
   </section>
-  <footer id="footer" class="py-lg-7">
+  <footer id="footer" class="py-lg-7 bottom">
     <div class="footer-bottom py-3 text-center">
       <div class="container-lg">
         <p class="m-0">

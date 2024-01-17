@@ -195,3 +195,45 @@ table a:hover::before {
   transform: translateX(-50%);
   top: 5px; /* Новое свойство для позиционирования сверху */
 }
+
+/* Ваши текущие стили */
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Регулируйте отступ в зависимости от дизайна */
+}
+
+.pagination {
+  list-style: none;
+  display: flex;
+  gap: 10px; /* Расстояние между кнопками */
+}
+
+.pagination li {
+  display: inline-block;
+}
+
+.pagination a {
+  text-decoration: none;
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.pagination a:hover {
+  background-color: #ddd;
+}
+
+.pagination .active {
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
+}
+
+.pagination span {
+  color: #000000; /* Пример изменения цвета текста */
+  margin-top: 10px;
+}

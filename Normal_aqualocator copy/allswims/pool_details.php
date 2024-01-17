@@ -163,7 +163,7 @@ $poolData = $result->fetch_assoc();
 </script>
 
 
-<footer id="footer" class="footer mt-auto py-lg-7">
+<footer id="footer" class="footer mt-auto py-lg-7 bottom">
     <div class="footer-bottom py-3 text-center">
         <div class="container-lg">
             <p class="m-0">
