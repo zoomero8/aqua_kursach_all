@@ -29,32 +29,49 @@ $userData = getUserData(); // Предположим, что у вас есть 
 </head>
 
 <body class="mt-5">
-    <a href="../main/index.php" class="newmain-button">Главная</a>
-    <a href="../aquamap/index.php" class="map-main-button">К карте</a>
-    <h1 class="display-2 text-center mx-auto fs-2" data-aos="fade-up" data-aos-delay="200">
-        <?= htmlspecialchars($userData['name'] ?? '', ENT_QUOTES, 'UTF-8') ?>
-    </h1>
+    <div class="left-column">
+        <a href="../main/index.php" class="newmain-button">Главная</a>
+        <a href="../aquamap/index.php" class="map-main-button">К карте</a>
+        <h1 class="display-2 text-center mx-auto fs-2" data-aos="fade-up" data-aos-delay="200">
+            <?= htmlspecialchars($userData['name'] ?? '', ENT_QUOTES, 'UTF-8') ?>
+        </h1>
 
-    <table border="1">
-        <tr>
-            <th>Об аккаунте</th>
-            <th>Данные</th>
-        </tr>
-        <tr>
-            <td>Логин</td>
-            <td>
-                <?= htmlspecialchars($userData['login'] ?? '', ENT_QUOTES, 'UTF-8') ?>
-            </td>
-        </tr>
-        <tr>
-            <td>Почта</td>
-            <td>
-                <?= htmlspecialchars($userData['email'] ?? '', ENT_QUOTES, 'UTF-8') ?>
-            </td>
-        </tr>
-        
-    </table>
+        <table border="1">
+            <tr>
+                <th>Об аккаунте</th>
+                <th>Данные</th>
+            </tr>
+            <tr>
+                <td>Логин</td>
+                <td>
+                    <?= htmlspecialchars($userData['login'] ?? '', ENT_QUOTES, 'UTF-8') ?>
+                </td>
+            </tr>
+            <tr>
+                <td>Почта</td>
+                <td>
+                    <?= htmlspecialchars($userData['email'] ?? '', ENT_QUOTES, 'UTF-8') ?>
+                </td>
+            </tr>
+
+        </table>
+    </div>
 </body>
+
+<div class="container">
+    <div class="right-column">
+        <h2>Ваши бассейны</h2>
+        <?php if (!empty($userData['swimpools'])): ?>
+            <!-- Здесь вы можете вывести информацию о каждом бассейне -->
+            <p>
+                <?= $userData['swimpools']['objectName'] ?>
+            </p>
+        <?php else: ?>
+            <p>Вы еще не добавили бассейны.</p>
+        <?php endif; ?>
+    </div>
+</div>
+
 
 <footer id="footer" class="footer mt-auto py-lg-7">
     <div class="footer-bottom py-3 text-center">

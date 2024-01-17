@@ -173,6 +173,28 @@ body {
   .map-main-button:hover {
     background-color: #073d7c;
   }
+
+  .left-column {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 40%;
+    margin-left: 5%; /* Добавлен отступ слева */
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-start; /* Добавлено свойство для вертикального выравнивания вверх */
+}
+
+.right-column {
+  padding: 20px;
+  box-sizing: border-box;
+  width: 50%;
+  margin-top: -220px; /* Замените 20px на нужное вам значение */
+  font-size: 24px; /* Замените 16px на нужное вам значение */
+}
   
   
   
