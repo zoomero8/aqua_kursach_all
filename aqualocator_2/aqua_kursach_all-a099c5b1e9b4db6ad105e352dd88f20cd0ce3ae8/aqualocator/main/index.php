@@ -1,25 +1,3 @@
-<?php
-include __DIR__ . '/../aquamap/dbconnector.php';
-include __DIR__ . '/../registration/session.php';
-// Получаем идентификатор бассейна из URL
-
-$userId = isset($_GET['id']) ? $_GET['id'] : '';
-// Запрос к базе данных для получения данных о бассейне
-$query = "SELECT * FROM swimpools_users WHERE id = '$userId'";
-$result = $mysql->query($query);
-
-// Обработка ошибок при выполнении запроса
-if (!$result) {
-  die('Ошибка запроса: ' . $mysql->error);
-}
-
-// Получение данных о бассейне
-$userData = $result->fetch_assoc();
-
-// Закрываем соединение с базой данных
-$mysql->close();
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -63,16 +41,9 @@ $mysql->close();
               <li class="scrollspy-link nav-item">
                 <a class="nav-link text-dark" data-target="products" href="../allswims/pools.php">Бассейны</a>
               </li>
-              <?php
-              if (isLoggedIn()) {
-                // Если пользователь вошел в аккаунт, отображаем кнопку "ЛИЧНЫЙ КАБИНЕТ" с передачей id
-                echo '<a class="nav-link text-dark" href="personal_account.php?id=' . $userId . '">Личный кабинет</a>';
-              } else {
-                // Если пользователь не вошел в аккаунт, оставляем код без изменений
-                echo '<a class="nav-link text-dark" data-target="products" href="../registration/index.php">Аккаунт</a>';
-              }
-              ?>
-
+              <li class="scrollspy-link nav-item">
+                <a class="nav-link text-dark" data-target="products" href="../registration/index.html">Аккаунт</a>
+              </li>
               <span class="scrollspy-indicator"></span>
             </ul>
           </div>
