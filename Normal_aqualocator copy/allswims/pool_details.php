@@ -12,11 +12,23 @@ $result = $mysql->query($query);
 if (!$result) {
     die('Ошибка запроса: ' . $mysql->error);
 }
-
 // Получение данных о бассейне
 $poolData = $result->fetch_assoc();
-
 ?>
+
+<?php
+    // Инициализируем $isFavorite значением false
+    $isFavorite = false;
+
+    // Проверяем, авторизован ли пользователь
+    if (isLoggedIn()) {
+        // Получаем данные пользователя
+        $userData = getUserData();
+
+        // Проверяем, есть ли бассейн в избранном у пользователя
+        $isFavorite = $userData && in_array($poolId, $userData['favoritePools']);
+    }
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,6 +49,14 @@ $poolData = $result->fetch_assoc();
 <body class="mt-5">
     <a href="pools.php" class="newmain-button">Назад</a>
     <a href="../aquamap/index.php" class="map-main-button">К карте</a>
+    <div class="button-container">
+    <?php if (isLoggedIn()): ?>
+        <?php if ($isFavorite): ?>
+            <button class="btn btn-danger remove-from-favorites" data-pool-id="<?= $poolId ?>">Удалить из избранного</button>
+        <?php else: ?>
+            <button class="btn btn-success add-to-favorites" data-pool-id="<?= $poolId ?>">Добавить в избранное</button>
+        <?php endif; ?>
+    <?php endif; ?>
     <h1 class="display-2 text-center mx-auto fs-2" data-aos="fade-up" data-aos-delay="200">
         <?= htmlspecialchars($poolData['ObjectName'] ?? '', ENT_QUOTES, 'UTF-8') ?>
     </h1>
@@ -107,26 +127,9 @@ $poolData = $result->fetch_assoc();
             </td>
         </tr>
     </table>
-    <?php
-    // Инициализируем $isFavorite значением false
-    $isFavorite = false;
 
-    // Проверяем, авторизован ли пользователь
-    if (isLoggedIn()) {
-        // Получаем данные пользователя
-        $userData = getUserData();
 
-        // Проверяем, есть ли бассейн в избранном у пользователя
-        $isFavorite = $userData && in_array($poolId, $userData['favoritePools']);
-    }
-    ?>
-    <?php if (isLoggedIn()): ?>
-        <?php if ($isFavorite): ?>
-            <button class="btn btn-danger remove-from-favorites" data-pool-id="<?= $poolId ?>">Удалить из избранного</button>
-        <?php else: ?>
-            <button class="btn btn-success add-to-favorites" data-pool-id="<?= $poolId ?>">Добавить в избранное</button>
-        <?php endif; ?>
-    <?php endif; ?>
+</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script>
@@ -158,7 +161,6 @@ $poolData = $result->fetch_assoc();
         });
     });
 </script>
-
 
 
 <footer id="footer" class="footer mt-auto py-lg-7">

@@ -174,4 +174,24 @@ table a:hover::before {
   background-color: #073d7c;
 }
 
+.add-to-favorites,
+.remove-from-favorites {
+    position: relative;
+    left: 80%; /* Положение относительно центра */
+    transform: translateX(-50%); /* Сдвигаем кнопки назад на половину их ширины */
+}
 
+.button-container {
+  display: flex;
+  flex-direction: column; /* Изменили направление на вертикальное */
+  margin-bottom: 20px; /* Дополнительный отступ между кнопками и названием бассейна */
+  position: relative; /* Добавили position: relative для контейнера */
+}
+
+.button-container button {
+  margin-bottom: 10px; /* Отступ между кнопками */
+  position: absolute;
+  left: 80%;
+  transform: translateX(-50%);
+  top: 5px; /* Новое свойство для позиционирования сверху */
+}

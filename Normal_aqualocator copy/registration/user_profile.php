@@ -64,15 +64,50 @@ $userData = getUserData(); // Предположим, что у вас есть 
         <?php if (!empty($userData['swimpools'])): ?>
             <!-- Используйте цикл для вывода информации о каждом бассейне -->
             <?php foreach ($userData['swimpools'] as $swimpool): ?>
-                <p>
-                    <?= $swimpool['objectName'] ?>
-                </p>
+                <div class="swimpool-item">
+                        <p>
+                            <?= $swimpool['objectName'] ?>
+                        </p>
+                        <!-- Добавьте кнопку для удаления бассейна из избранного -->
+                        <button class="btn btn-danger remove-from-favorites" data-pool-id="<?= $swimpool['global_id'] ?>">Удалить из избранного</button>
+                    </div>
             <?php endforeach; ?>
         <?php else: ?>
             <p>Вы еще не добавили бассейны.</p>
         <?php endif; ?>
     </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.add-to-favorites').click(function () {
+            var poolId = $(this).data('pool-id');
+            $.post('add_favorite.php', { pool_id: poolId }, function (data) {
+                if (data === 'success') {
+                    // Успешно добавлено в избранное, обновите страницу или выполните другие действия
+                    location.reload();
+                } else {
+                    // Ошибка добавления в избранное
+                    console.error(data);
+                }
+            });
+        });
+
+        $('.remove-from-favorites').click(function () {
+            var poolId = $(this).data('pool-id');
+            $.post('../allswims/remove_favorite.php', { pool_id: poolId }, function (data) {
+                if (data === 'success') {
+                    // Успешно удалено из избранного, обновите страницу или выполните другие действия
+                    location.reload();
+                } else {
+                    // Ошибка удаления из избранного
+                    console.error(data);
+                }
+            });
+        });
+    });
+</script>
 
 
 <footer id="footer" class="footer mt-auto py-lg-7">
