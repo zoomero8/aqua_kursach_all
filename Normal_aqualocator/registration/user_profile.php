@@ -29,7 +29,7 @@ $userData = getUserData(); // Предположим, что у вас есть 
 </head>
 
 <body class="mt-5">
-    <a href="../main/index.php" class="newmain-button">Назад</a>
+    <a href="../main/index.php" class="newmain-button">Главная</a>
     <a href="../aquamap/index.php" class="map-main-button">К карте</a>
     <h1 class="display-2 text-center mx-auto fs-2" data-aos="fade-up" data-aos-delay="200">
         <?= htmlspecialchars($userData['name'] ?? '', ENT_QUOTES, 'UTF-8') ?>
