@@ -99,118 +99,118 @@
           информации. Ваш идеальный бассейн всегда под рукой с AQUA Navigator!
         </p>
       </div>
-      <div class="row " data-aos="fade-up" data-aos-delay="200">
+      <div class="row" data-aos="fade-up" data-aos-delay="200">
         <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-          <div class="icon-box text-center border py-lg-7 px-3 rounded-4">
+          <div class="icon-box text-center border py-lg-7 px-3 rounded-4 h-100" style="margin-top: 5px;">
             <div class="icon-box-icon mb-3">
-              <svg class="balloon svg-primary" width="50" height="50">
-                <use xlink:href="#balloon"></use>
-              </svg>
+              <!-- Уменьшенное изображение с использованием стилей -->
+              <img src="interface_2.svg" alt="interface" style="width: 50px; height: 50px; object-fit: cover;">
             </div>
             <div class="icon-box-content ps-3">
               <h4 class="fs-3 fw-medium text-capitalize">
                 Удобство интерфейса
               </h4>
-              <p> Простой и интуитивно понятный интерфейс для легкого поиска и использования функций сайта</p>
+              <p>Простой и интуитивно понятный интерфейс для легкого поиска и использования функций сайта.</p>
             </div>
           </div>
         </div>
+
         <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-          <div class="icon-box text-center border py-lg-7 px-3 rounded-4">
-            <div class="icon-box-icon mb-3">
-              <svg class="bag-heart svg-primary" width="50" height="50">
-                <use xlink:href="#bag-heart"></use>
-              </svg>
+          <div class="icon-box text-center border py-lg-7 px-3 rounded-4 h-100">
+          <div class="icon-box-icon mb-3">
+              <!-- Уменьшенное изображение с использованием стилей -->
+              <img src="interface_2.svg" alt="interface" style="width: 50px; height: 50px; object-fit: cover;">
             </div>
             <div class="icon-box-content ps-3">
               <h4 class="fs-3 fw-medium text-capitalize">
                 Доступность для всех
               </h4>
-              <p>Специальная функция для поиска бассейнов, удовлетворяющих потребностям всех людей</p>
+              <p>Специальная функция для поиска бассейнов, удовлетворяющих потребностям всех людей.</p>
             </div>
           </div>
         </div>
+
         <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-          <div class="icon-box text-center border py-lg-7 px-3 rounded-4">
-            <div class="icon-box-icon mb-3">
-              <svg class="handiplast svg-primary" width="50" height="50">
-                <use xlink:href="#handiplast"></use>
-              </svg>
+          <div class="icon-box text-center border py-lg-7 px-3 rounded-4 h-100">
+          <div class="icon-box-icon mb-3">
+              <!-- Уменьшенное изображение с использованием стилей -->
+              <img src="interface_2.svg" alt="interface" style="width: 50px; height: 50px; object-fit: cover;">
             </div>
             <div class="icon-box-content ps-3">
               <h4 class="fs-3 fw-medium text-capitalize">
-                Комлексная информация
+                Комплексная информация
               </h4>
-              <p>Актульаная информация о бассейнах.</p>
+              <p>Актуальная информация о бассейнах.</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section id="contact-us">
-    <div class="container-lg">
-      <div class="row">
-        <div class="display-header mt-0 text-center mb-5">
-          <h2 class="display-3 fw-medium">Наши контакты</h2>
-          <p class="fs-5">Свяжитесь с нами для получения большей информации</p>
-        </div>
-        <div class="contact-content">
-          <div class="row">
-            <div class="col-lg-4 col-md-6 mb-3">
-              <div class="icon-box d-flex flex-wrap align-items-center justify-content-center border rounded-4 p-5">
-                <div class="icon-box-icon me-3">
-                  <svg class="call-chat svg-primary" width="80" height="80">
-                    <use xlink:href="#call-chat" />
-                  </svg>
-                </div>
-                <div class="icon-box-content">
-                  <p class="mb-0">+7 (999) - 888 00 11</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-3">
-              <div class="icon-box d-flex flex-wrap align-items-center justify-content-center border rounded-4 p-5">
-                <div class="icon-box-icon me-3">
-                  <svg class="mail svg-primary" width="80" height="80">
-                    <use xlink:href="#mail" />
-                  </svg>
-                </div>
-                <div class="icon-box-content">
-                  <p class="mb-0">aquanav@gmail.com</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-3">
-              <div class="icon-box d-flex flex-wrap align-items-center justify-content-center border rounded-4 p-5">
-                <div class="icon-box-icon me-3">
-                  <svg class="location svg-primary" width="80" height="80">
-                    <use xlink:href="#location" />
-                  </svg>
-                </div>
-                <div class="icon-box-content">
-                  <p class="mb-0">Россия, Москва</p>
-                  <p>Никольский переулок, 6 </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer id="footer" class="py-lg-7 bottom">
-    <div class="footer-bottom py-3 text-center">
-      <div class="container-lg">
-        <p class="m-0">
-          © 2024 AQUA Navigator.
-        </p>
-      </div>
-    </div>
-  </footer>
 
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+      <section id="contact-us">
+        <div class="container-lg">
+          <div class="row">
+            <div class="display-header mt-0 text-center mb-5">
+              <h2 class="display-3 fw-medium">Наши контакты</h2>
+              <p class="fs-5">Свяжитесь с нами для получения большей информации</p>
+            </div>
+            <div class="contact-content">
+              <div class="row">
+                <div class="col-lg-4 col-md-6 mb-3">
+                  <div class="icon-box d-flex flex-wrap align-items-center justify-content-center border rounded-4 p-5">
+                    <div class="icon-box-icon me-3">
+                      <svg class="call-chat svg-primary" width="80" height="80">
+                        <use xlink:href="#call-chat" />
+                      </svg>
+                    </div>
+                    <div class="icon-box-content">
+                      <p class="mb-0">+7 (999) - 888 00 11</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3">
+                  <div class="icon-box d-flex flex-wrap align-items-center justify-content-center border rounded-4 p-5">
+                    <div class="icon-box-icon me-3">
+                      <svg class="mail svg-primary" width="80" height="80">
+                        <use xlink:href="#mail" />
+                      </svg>
+                    </div>
+                    <div class="icon-box-content">
+                      <p class="mb-0">aquanav@gmail.com</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3">
+                  <div class="icon-box d-flex flex-wrap align-items-center justify-content-center border rounded-4 p-5">
+                    <div class="icon-box-icon me-3">
+                      <svg class="location svg-primary" width="80" height="80">
+                        <use xlink:href="#location" />
+                      </svg>
+                    </div>
+                    <div class="icon-box-content">
+                      <p class="mb-0">Россия, Москва</p>
+                      <p>Никольский переулок, 6 </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer id="footer" class="py-lg-7 bottom">
+        <div class="footer-bottom py-3 text-center">
+          <div class="container-lg">
+            <p class="m-0">
+              © 2024 AQUA Navigator.
+            </p>
+          </div>
+        </div>
+
+
+      </footer>
+
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
