@@ -47,8 +47,8 @@ $poolData = $result->fetch_assoc();
 </head>
 
 <body class="mt-5">
-    <a href="pools.php" class="newmain-button">Назад</a>
-    <a href="../aquamap/index.php" class="map-main-button">К карте</a>
+    <a href="pools.php" class="newmain-button">Бассейны</a>
+    <a href="../main/index.php" class="map-main-button">Главная</a>
     <div class="button-container">
     <?php if (isLoggedIn()): ?>
         <?php if ($isFavorite): ?>

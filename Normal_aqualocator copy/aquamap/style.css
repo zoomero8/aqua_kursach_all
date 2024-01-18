@@ -11,7 +11,7 @@ body {
     width: 100%;
     max-width: 1000px;
     height: 700px;
-    border: 2px solid #0a74f1; /* Голубая обводка вокруг карты */
+    border: 2px solid #0e4bf1; /* Голубая обводка вокруг карты */
     border-radius: 8px; /* Округленные углы */
     overflow: hidden; /* Убирает обводку за пределы карты */
 }
@@ -27,7 +27,7 @@ body {
 	  width: 40px;
 	  height: 40px;
 	  background-color: #fff; /* Цвет фона метки */
-	  border: 2px solid #0a74f1; /* Цвет обводки метки */
+	  border: 2px solid #0e4bf1; /* Цвет обводки метки */
 	  border-radius: 50%; /* Сделать метку круглой */
 	}
 	
@@ -45,7 +45,7 @@ body {
 	.newmain-button {
 		display: inline-block;
 		padding: 10px 20px;
-		background-color: #0A74F1;
+		background-color: #0e4bf1;
 		color: #fff;
 		border: none;
 		border-radius: 5px;
@@ -58,5 +58,24 @@ body {
 	  }
 	  
 	  .newmain-button:hover {
+		background-color: #073d7c;
+	  }
+
+	  .map-main-button {
+		display: inline-block;
+		padding: 10px 20px;
+		background-color: #0e4bf1;
+		color: #fff;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		text-decoration: none;
+		transition: background-color 0.3s ease-in-out;
+		position: absolute;
+		top: 10px; /* Расстояние сверху */
+		left: 10px; /* Расстояние слева */
+	  }
+	  
+	  .map-main-button:hover {
 		background-color: #073d7c;
 	  }

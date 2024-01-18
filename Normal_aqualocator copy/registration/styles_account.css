@@ -16,14 +16,14 @@ body {
     form input[type="text"] {
       width: 300px;
       padding: 10px;
-      border: 2px solid #0a74f1;
+      border: 2px solid #0e4bf1;
       border-radius: 5px;
   }
     
     /* Style for the search button */
     form button {
       padding: 10px 20px;
-      background-color: #0a74f1;
+      background-color: #0e4bf1;
       color: #fff;
       border: none;
       border-radius: 5px;
@@ -34,6 +34,7 @@ body {
   }
   form button:hover {
     background-color: #073d7c;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
     
   /* Обновленный стиль для таблицы с закругленными краями */
@@ -80,7 +81,7 @@ body {
     .main-button {
       display: inline-block;
       padding: 10px 20px;
-      background-color: #0A74F1;
+      background-color: #0e4bf1;
       color: #fff;
       border: none;
       border-radius: 5px;
@@ -94,6 +95,7 @@ body {
   
   .main-button:hover {
     background-color: #073d7c;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
   
   .swim-title {
@@ -115,7 +117,7 @@ body {
   
   /* Эффект при наведении на ссылку */
   table a:hover {
-    color: #0a74f1;
+    color: #0e4bf1;
   }
   
   table a::before {
@@ -125,7 +127,7 @@ body {
     left: 0;
     right: 0;
     height: 2px;
-    background-color: #0a74f1;
+    background-color: #0e4bf1;
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.3s ease-in-out;
@@ -139,7 +141,7 @@ body {
   .newmain-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #0A74F1;
+    background-color: #0e4bf1;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -153,12 +155,13 @@ body {
   
   .newmain-button:hover {
     background-color: #073d7c;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
   
   .map-main-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #0A74F1;
+    background-color: #0e4bf1;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -172,6 +175,7 @@ body {
   
   .map-main-button:hover {
     background-color: #073d7c;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
 
   .left-column {
@@ -196,5 +200,15 @@ body {
   font-size: 24px; /* Замените 16px на нужное вам значение */
 }
   
+.swimpool-link {
+  color: #000000; /* Цвет ссылки */
+  text-decoration: none; /* Убрать подчеркивание ссылки */
+  cursor: pointer; /* Изменение курсора при наведении на ссылку */
+  transition: color 0.3s; /* Плавное изменение цвета при наведении */
+}
+
+.swimpool-link:hover {
+  color: #0e4bf1; /* Новый цвет при наведении */
+}
   
   

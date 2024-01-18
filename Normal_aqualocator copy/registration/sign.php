@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
         setSession($id, $login);
 
         // Перенаправление на страницу профиля пользователя
-        header('Location: user_profile.php');
+        header('Location: ../main/index.php');
         exit();
     } else {
         echo "Неверный логин или пароль.";

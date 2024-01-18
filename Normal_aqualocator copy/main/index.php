@@ -42,26 +42,26 @@
                 <a class="nav-link text-dark" data-target="products" href="../allswims/pools.php">Бассейны</a>
               </li>
               <?php
-          include __DIR__ . '/../registration/session.php';
+              include __DIR__ . '/../registration/session.php';
 
-          if (isLoggedIn()) {
-            // Если пользователь вошел в аккаунт, отобразите кнопку "Личный кабинет" и "Выйти"
-            echo '<li class="scrollspy-link nav-item">
+              if (isLoggedIn()) {
+                // Если пользователь вошел в аккаунт, отобразите кнопку "Личный кабинет" и "Выйти"
+                echo '<li class="scrollspy-link nav-item">
                     <a class="nav-link text-dark" href="../registration/user_profile.php">Личный кабинет</a>
                   </li>';
-            echo '<li class="scrollspy-link nav-item">
+                echo '<li class="scrollspy-link nav-item">
                     <a class="nav-link text-dark" href="../registration/logout.php">Выйти</a>
                   </li>';
-          } else {
-            // Если пользователь не вошел в аккаунт, отобразите кнопки "Войти" и "Зарегистрироваться"
-            echo '<li class="scrollspy-link nav-item">
+              } else {
+                // Если пользователь не вошел в аккаунт, отобразите кнопки "Войти" и "Зарегистрироваться"
+                echo '<li class="scrollspy-link nav-item">
                     <a class="nav-link text-dark" data-target="products" href="../registration/sign_main.php">Войти</a>
                   </li>';
-            echo '<li class="scrollspy-link nav-item">
+                echo '<li class="scrollspy-link nav-item">
                     <a class="nav-link text-dark" data-target="products" href="../registration/registr_main.php">Зарегистрироваться</a>
                   </li>';
-          }
-          ?>
+              }
+              ?>
               <span class="scrollspy-indicator"></span>
             </ul>
           </div>
@@ -93,13 +93,13 @@
       <div class="col-lg-7 text-center mx-auto py-5" data-aos="fade-up" data-aos-delay="200">
         <h2 class="display-3 fw-bold">Почему AQUA Navigator?</h2>
         <p class="lead m-4">
-          AQUA Navigator - сервис для поиска бассейнов. Находите ближайшие объекты, получайте информацию о расписании,
-          ценах и отзывах.
+          AQUA Navigator - сервис для поиска бассейнов. Находите лучшие объекты, получайте информацию о расписании и
+          адресах.
           Регулярные обновления данных обеспечивают актуальность
           информации. Ваш идеальный бассейн всегда под рукой с AQUA Navigator!
         </p>
       </div>
-      <div class="row" data-aos="fade-up" data-aos-delay="200">
+      <div class="row " data-aos="fade-up" data-aos-delay="200">
         <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
           <div class="icon-box text-center border py-lg-7 px-3 rounded-4">
             <div class="icon-box-icon mb-3">
@@ -109,9 +109,9 @@
             </div>
             <div class="icon-box-content ps-3">
               <h4 class="fs-3 fw-medium text-capitalize">
-                Интеллектуальный поиск
+                Удобство интерфейса
               </h4>
-              <p> Персонализированные рекомендации, учитывающие предпочтения пользователей</p>
+              <p> Простой и интуитивно понятный интерфейс для легкого поиска и использования функций сайта</p>
             </div>
           </div>
         </div>
@@ -124,9 +124,9 @@
             </div>
             <div class="icon-box-content ps-3">
               <h4 class="fs-3 fw-medium text-capitalize">
-                Комплексная информация
+                Доступность для всех
               </h4>
-              <p>Расписание, цены, отзывы – всегда в актуальной форме</p>
+              <p>Специальная функция для поиска бассейнов, удовлетворяющих потребностям всех людей</p>
             </div>
           </div>
         </div>
@@ -139,9 +139,9 @@
             </div>
             <div class="icon-box-content ps-3">
               <h4 class="fs-3 fw-medium text-capitalize">
-                Актуальность данных
+                Комлексная информация
               </h4>
-              <p>Регулярные обновления для надежной и точной информации.</p>
+              <p>Актульаная информация о бассейнах.</p>
             </div>
           </div>
         </div>

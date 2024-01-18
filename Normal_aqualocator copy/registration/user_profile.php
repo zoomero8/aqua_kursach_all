@@ -31,7 +31,7 @@ $userData = getUserData(); // Предположим, что у вас есть 
 <body class="mt-5">
     <div class="left-column">
         <a href="../main/index.php" class="newmain-button">Главная</a>
-        <a href="../aquamap/index.php" class="map-main-button">К карте</a>
+        <a href="../aquamap/index.php" class="map-main-button">Аккаунт</a>
         <h1 class="display-2 text-center mx-auto fs-2" data-aos="fade-up" data-aos-delay="200">
             <?= htmlspecialchars($userData['name'] ?? '', ENT_QUOTES, 'UTF-8') ?>
         </h1>
@@ -60,17 +60,15 @@ $userData = getUserData(); // Предположим, что у вас есть 
 
 <div class="container">
     <div class="right-column">
-    <h1 class="display-2 mx-auto fs-2" data-aos="fade-up" data-aos-delay="200">Избранные бассейны</h1>
+        <h1 class="display-2 mx-auto fs-2" data-aos="fade-up" data-aos-delay="200">Избранные бассейны</h1>
         <?php if (!empty($userData['swimpools'])): ?>
-            <!-- Используйте цикл для вывода информации о каждом бассейне -->
             <?php foreach ($userData['swimpools'] as $swimpool): ?>
                 <div class="swimpool-item">
-                        <p>
-                            <?= $swimpool['objectName'] ?>
-                        </p>
-                        <!-- Добавьте кнопку для удаления бассейна из избранного -->
-                        <button class="btn btn-danger remove-from-favorites" data-pool-id="<?= $swimpool['global_id'] ?>">Удалить из избранного</button>
-                    </div>
+                    <!-- Замените текстовый блок на активную ссылку на страницу бассейна -->
+                    <a href="../allswims/pool_details.php?pool_id=<?= $swimpool['global_id'] ?>" class="swimpool-link">
+                        <?= $swimpool['objectName'] ?>
+                    </a>
+                </div>
             <?php endforeach; ?>
         <?php else: ?>
             <p>Вы еще не добавили бассейны.</p>
@@ -119,6 +117,5 @@ $userData = getUserData(); // Предположим, что у вас есть 
         </div>
     </div>
 </footer>
-
 
 </html>

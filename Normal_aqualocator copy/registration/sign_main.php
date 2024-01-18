@@ -1,3 +1,21 @@
+<?php
+include "session.php";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Проверка заполненности полей
+    if (empty($_POST["login"]) || empty($_POST["email"]) || empty($_POST["password"]) || empty($_POST["name"])) {
+        echo "Заполните все поля.";
+        exit();
+    }
+
+    // Проверка формата почты
+    $email = $_POST["email"];
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Укажите корректный адрес электронной почты.";
+        exit();
+    }
+}
+?>
+
 <!DOCTYPE html>
 <!-- Coding By CodingNepal - codingnepalweb.com -->
 <html lang="en" dir="ltr">

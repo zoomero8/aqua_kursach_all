@@ -21,7 +21,8 @@ $termsResult = mysqli_query($mysql, $termsQuery);
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
-<a href="../main/index.php" class="newmain-button">Назад</a>
+<a href="../main/index.php" class="map-main-button">Главная</a>
+<a href="../main/index.php" class="newmain-button">Бассейны</a>
 <h1 class="display-2 text-center mx-auto" data-aos="fade-up" data-aos-delay="200">
     Карта бассейнов
 </h1>

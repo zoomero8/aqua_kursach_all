@@ -16,7 +16,7 @@ body {
   --bs-body-bg-rgb: 249, 245, 243;
   --bs-body-bg: #FFF;
 
-  --bs-primary: #0A74F1;
+  --bs-primary: #0e4bf1;
   --bs-black: #111;
   --bs-white: #fff;
   --bs-light: #f8f8f8;
@@ -92,7 +92,7 @@ body {
 .main-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #0A74F1;
+  background-color: #0e4bf1;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -117,7 +117,7 @@ table a, #header-nav a {
 
 /* Эффект при наведении на ссылку или заголовок */
 table a:hover, #header-nav a:hover {
-  color: #0a74f1;
+  color: #0e4bf1;
 }
 
 /* Блок с названием бассейна или заголовком при наведении */
@@ -128,7 +128,7 @@ table a::before, #header-nav a::before {
   left: 0;
   right: 0;
   height: 2px;
-  background-color: #0a74f1;
+  background-color: #0e4bf1;
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s ease-in-out;
