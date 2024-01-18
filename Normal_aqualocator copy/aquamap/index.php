@@ -31,7 +31,7 @@ $termsResult = mysqli_query($mysql, $termsQuery);
 	</script>
 	<script src="script.js"></script>
 </body>
-<footer id="footer" class="footer mt-auto py-lg-7 fixed-bottom">
+<footer id="footer" class="footer mt-auto py-lg-7 bottom">
     <div class="footer-bottom py-3 text-center">
         <div class="container-lg">
             <p class="m-0">
