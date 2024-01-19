@@ -1,5 +1,5 @@
 body {
-  --heading-font: "Poppins", Georgia, serif;
+  font-family: 'Poppins', Georgia, sans-serif;
   --heading-font-weight: 400;
   --heading-color: #000000;
   --heading-line-height: 1.24;
@@ -7,7 +7,6 @@ body {
   --swiper-theme-color: #8C907E;
 
   /* bootstrap */
-  --bs-body-font-family: "Poppins", Georgia, serif;
   --bs-body-font-size: 16px;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.9;
@@ -41,42 +40,11 @@ body {
 
 /* Удалены стили для h1, h2, h3, h4, h5, h6, a:hover, input:focus, strong, .overflow-x-hidden, и т.д. */
 
-@media (min-width: 1600px) {
-  .container, .container-lg {
-    max-width: 1550px;
-  }
-  .container-md {
-    max-width: 1430px;
-  }
-  .container {
-    max-width: 1200px;
-  }
-}
-
-/* Удалены стили для .list-group-item, .btn, .btn-group-lg, .btn-primary, .btn-outline-gray, .text-white, .text-gray-200, .text-dark-gray, и т.д. */
-
-[data-bs-theme=dark] {
-  color-scheme: dark;
-  /* Другие стили для темы dark здесь */
-}
-
-/* Удалены стили для .border-gray, .border-white, .border-2, .border-3, .border-4, .border-10, .display-1, и т.д. */
-
-@media (max-width: 1200px) {
-  .navbar-nav .nav-item {
-    border-bottom: 1px solid var(--bs-gray-200);
-    text-align: left;
-    width: 100%;
-  }
-  .navbar-nav .dropdown-menu {
-    border: none;
-  }
-}
-
-@media (max-width: 1340px) {
-  #intro .content-box {
-    top: -114px;
-  }
+body, html {
+  font-family: 'Poppins', Georgia, sans-serif;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* Удалены стили для .homepage-v3, #testimonials .swiper.review-swiper, .swiper-pagination, .swiper-pagination span.swiper-pagination-bullet, .swiper-pagination span.swiper-pagination-bullet-active, .video-content .player, .subscribe-content button, и т.д. */
@@ -106,36 +74,66 @@ body {
 .main-button:hover {
 background-color: #073d7c;
 }
+
+
 table a, #header-nav a {
   color: #313131;
   text-decoration: none;
   position: relative;
   display: inline-block;
-  padding: 10px;
+  padding: 0px;
   transition: color 0.3s ease-in-out;
 }
 
 /* Эффект при наведении на ссылку или заголовок */
-table a:hover, #header-nav a:hover {
+table a:hover, #header-nav a:hover, #right_button a:hover {
   color: #0a74f1;
 }
 
-/* Блок с названием бассейна или заголовком при наведении */
-table a::before, #header-nav a::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+header::after {
+  content: '';
+  display: block;
   height: 2px;
-  background-color: #0a74f1;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  background-color: #0e4bf1;
 }
 
-/* Эффект развертывания линии при наведении */
-table a:hover::before, #header-nav a:hover::before {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  max-width: 100%; /* Изменено с max-width: 1200px; */
+  width: 100%;
+}
+
+.left-button, .right-button, .nav-link {
+  background-color: transparent; /* убираем фон */
+  color: #000000; /* цвет текста */
+  padding: 15px; /* увеличенный размер кнопок */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none; /* убираем обводку при фокусировке */
+  display: inline-block;
+  transition: color 0.3s ease-in-out;
+  font-size: 16px; /* Увеличение размера шрифта */
+text-decoration: none;
+}
+
+.left-button {
+  font-size: 25px; /* Увеличение размера шрифта */
+}
+
+.right-button {
+  display: flex;
+  gap: 25px;
+}
+
+.right-button .nav-link:hover {
+  color: #0A74F1; /* Измените цвет на желаемый синий */
+}
+
+.navbar-brand {
+  margin-right: 43%; /* Установите значение отступа в пикселях или других единицах измерения, которые вам подходят */
 }

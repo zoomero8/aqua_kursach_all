@@ -123,9 +123,6 @@ if (!$result) {
             echo "</tr>";
         }
 
-        // Закрываем соединение с базой данных
-        $result->close();
-        $mysql->close();
         ?>
     </table>
 

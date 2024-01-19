@@ -15,30 +15,18 @@
 </head>
 
 <body>
-  <header id="header" class="site-header position-fixed z-2 w-100 border-bottom mb-5">
-    <nav id="header-nav" class="navbar navbar-expand-lg py-2 bg-white">
-      <div class="container-lg">
-        <a class="navbar-brand pb-4" href="index.php">
-          <div class="logo">
-            <span class="logo-text">AQUA NAVIGATOR</span>
-          </div>
-        </a>
-        <button class="navbar-toggler d-flex d-lg-none order-3 p-2 border-0 shadow-none bg-white" type="button">
-          <svg class="navbar-icon" width="50" height="50">
-            <use xlink:href="#navbar-icon"></use>
-          </svg>
-        </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
-          <div class="offcanvas-header px-4 pb-0">
-            <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close"
-              data-bs-target="#bdNavbar"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav scrollspy-nav justify-content-end flex-grow-1 gap-lg-5 pe-3">
-              <li class="scrollspy-link nav-item">
-                <a class="nav-link text-dark" data-target="products" href="../aquamap/index.php">Карта бассейнов</a>
+  <header id="header" class="site-header position-fixed w-100 z-2 border-bottom mb-5">
+    <!-- здесь отступы лого-кнопки от левоого края -->
+      <nav id="header-nav" class="navbar navbar-expand py-2 bg-white w-100">
+          <a class="navbar-brand mt-3 fs-4 " href="index.php">
+            <span class="logo-text mx-3">AQUA Navigator</span>
+          </a>
+          <div class="right-button">
+            <ul class="navbar-nav scrollspy-nav justify-content-end flex-grow-1 gap-lg-5 pe-3 w-100">
+              <li class="scrollspy-link nav-item ">
+                <a class="nav-link text-dark " data-target="products" href="../aquamap/index.php">Карта бассейнов</a>
               </li>
-              <li class="scrollspy-link nav-item">
+              <li class=" nav-item">
                 <a class="nav-link text-dark" data-target="products" href="../allswims/pools.php">Бассейны</a>
               </li>
               <?php
@@ -46,7 +34,7 @@
 
               if (isLoggedIn()) {
                 // Если пользователь вошел в аккаунт, отобразите кнопку "Личный кабинет" и "Выйти"
-                echo '<li class="scrollspy-link nav-item">
+                echo '<li class="scrollspy-link nav-item ">
                     <a class="nav-link text-dark" href="../registration/user_profile.php">Личный кабинет</a>
                   </li>';
                 echo '<li class="scrollspy-link nav-item">
@@ -62,11 +50,10 @@
                   </li>';
               }
               ?>
-              <span class="scrollspy-indicator"></span>
+              <span class="scrollspy-indicator "></span>
             </ul>
-          </div>
         </div>
-      </div>
+    </div>
     </nav>
   </header>
   <section id="intro" class="scrollspy-section py-5">
@@ -91,7 +78,7 @@
   <section id="services" class="scrollspy-section py-lg-7">
     <div class="container-lg">
       <div class="col-lg-7 text-center mx-auto py-5" data-aos="fade-up" data-aos-delay="200">
-        <h2 class="display-3 fw-bold">Почему AQUA Navigator?</h2>
+        <h2 class="display-3 fw-bold">AQUA Navigator</h2>
         <p class="lead m-4">
           AQUA Navigator - сервис для поиска бассейнов. Находите лучшие объекты, получайте информацию о расписании и
           адресах.
@@ -117,7 +104,7 @@
 
         <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
           <div class="icon-box text-center border py-lg-7 px-3 rounded-4 h-100">
-          <div class="icon-box-icon mb-3">
+            <div class="icon-box-icon mb-3">
               <!-- Уменьшенное изображение с использованием стилей -->
               <img src="interface_2.svg" alt="interface" style="width: 50px; height: 50px; object-fit: cover;">
             </div>
@@ -132,7 +119,7 @@
 
         <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
           <div class="icon-box text-center border py-lg-7 px-3 rounded-4 h-100">
-          <div class="icon-box-icon mb-3">
+            <div class="icon-box-icon mb-3">
               <!-- Уменьшенное изображение с использованием стилей -->
               <img src="interface_2.svg" alt="interface" style="width: 50px; height: 50px; object-fit: cover;">
             </div>
