@@ -38,7 +38,13 @@
 .map-title-for-aquamap {
     text-align: center;
     margin-top: 100px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.map-text-for-aquamap {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 header {

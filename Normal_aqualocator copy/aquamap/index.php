@@ -48,6 +48,11 @@ $termsResult = mysqli_query($mysql, $termsQuery);
         Карта бассейнов
     </h1>
 
+    <a class="map-text-for-aquamap" data-aos="fade-up" data-aos-delay="5">
+        Для получения подробной информации нажмите на метку бассейна
+            </a>
+    
+
     <div id="map-test" class="map-for-aquamap"></div>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=7151535c-198c-4f28-af73-23eab7883cff&lang=ru_RU">
     </script>
