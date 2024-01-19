@@ -148,7 +148,9 @@ if (!$result) {
         <div class="footer-bottom py-3 text-center">
             <div class="container-lg">
                 <p class="m-0">
-                    © 2024 AQUA Navigator.
+                © 2024 AQUA Navigator. 
+              Данные взяты с открытого источника: 
+              https://data.mos.ru/opendata/890?isDynamic=false
                 </p>
             </div>
         </div>
