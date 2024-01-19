@@ -106,7 +106,7 @@
           <div class="icon-box text-center border py-lg-7 px-3 rounded-4 h-100">
             <div class="icon-box-icon mb-3">
               <!-- Уменьшенное изображение с использованием стилей -->
-              <img src="interface_2.svg" alt="interface" style="width: 50px; height: 50px; object-fit: cover;">
+              <img src="friendly.svg" alt="interface" style="width: 50px; height: 50px; object-fit: cover;">
             </div>
             <div class="icon-box-content ps-3">
               <h4 class="fs-3 fw-medium text-capitalize">
@@ -121,7 +121,7 @@
           <div class="icon-box text-center border py-lg-7 px-3 rounded-4 h-100">
             <div class="icon-box-icon mb-3">
               <!-- Уменьшенное изображение с использованием стилей -->
-              <img src="interface_2.svg" alt="interface" style="width: 50px; height: 50px; object-fit: cover;">
+              <img src="infa.svg" alt="interface" style="width: 50px; height: 50px; object-fit: cover;">
             </div>
             <div class="icon-box-content ps-3">
               <h4 class="fs-3 fw-medium text-capitalize">

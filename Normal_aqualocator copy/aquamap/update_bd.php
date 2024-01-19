@@ -1,7 +1,7 @@
 <?php
 require_once('dbconnector.php'); // Подключение файла db_connect.php
 
-$apiKey = '84620c80-a065-41ee-bee2-09462868e83d';
+$apiKey = '638e45ee-e73a-44b4-ad6b-dc414302266b';
 $baseURL = 'https://apidata.mos.ru/v1/datasets/1037/rows';
 $maxLimit = 500; // Максимальное количество записей на каждой странице
 $updateInterval = 120; // Интервал обновления данных в секундах 
@@ -30,10 +30,10 @@ function fetchDataFromAPI($skip, $limit, $apiKey, $baseURL) {
 function updateDatabase($conn, $data)
 {
     // Очистка таблицы перед обновлением, если необходимо
-    mysqli_query($conn, "TRUNCATE TABLE output");
+    mysqli_query($conn, "TRUNCATE TABLE swimpools");
 
     // Загрузка данных в базу данных MySQL
-    $stmt = mysqli_prepare($conn, "INSERT INTO output (EduOrganization, InstrumentSort, InstrumentType, InstrumentModel, InstrumentState, InstrumentCountryOfOrigin, InstrumentManufacturer, InstrumentManufacturingDate, InstrumentMonthRentCosts, InstrumentRepairDone, global_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt = mysqli_prepare($conn, "INSERT INTO swimpools (global_id, NameWinter, District, Address, Email, WebSite, HelpPhone ,WorkingHoursWinter, DisabilityFriendly) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
     foreach ($data as $item) {
         $rowData = array_values($item['Cells']);
@@ -58,7 +58,7 @@ function exportToCSV($data, $filename) {
     $csvFile = null;
 }
 
-$conn = mysqli_connect($db_host, $db_user, $db_password, $database);
+$conn = mysqli_connect($DB_HOST, $DB_USER, $DB_PASSWORD, $DB_NAME);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
@@ -97,7 +97,7 @@ echo '</pre>';
 updateDatabase($conn, $totalData);
 
 // Экспорт данных в CSV
-exportToCSV($totalData, 'output.csv');
+exportToCSV($totalData, 'swimpools.csv');
 
 ob_end_clean(); // Очищаем буфер вывода
 
