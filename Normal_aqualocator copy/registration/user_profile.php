@@ -19,19 +19,18 @@ $userData = getUserData(); // Предположим, что у вас есть 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles_account.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
 
 </head>
 
-<body>
-    <div class="left-column">
+<body class="body-for-aquamap">
     <header>
-        <div class="container">
+        <div class="container_2">
             <a href="../main/index.php" class="left-button">AQUA Navigator</a>
             <div class="right-buttons">
                 <a href="../aquamap/index.php" class="right-button">Карта бассейнов</a>
@@ -50,6 +49,8 @@ $userData = getUserData(); // Предположим, что у вас есть 
             </div>
         </div>
     </header>
+    <div class="left-column">
+
         <h1 class="display-2 text-center mx-auto fs-2" data-aos="fade-up" data-aos-delay="200">
             <?= htmlspecialchars($userData['name'] ?? '', ENT_QUOTES, 'UTF-8') ?>
         </h1>
@@ -78,7 +79,7 @@ $userData = getUserData(); // Предположим, что у вас есть 
 
 <div class="container">
     <div class="right-column">
-        <h1 class="display-2 mx-auto fs-2" data-aos="fade-up" data-aos-delay="200">Избранные бассейны</h1>
+    <h1 class="display-2 text-center mx-auto fs-2" data-aos="fade-up" data-aos-delay="200">Избранные бассейны</h1>
         <?php if (!empty($userData['swimpools'])): ?>
             <?php foreach ($userData['swimpools'] as $swimpool): ?>
                 <div class="swimpool-item">
@@ -126,7 +127,7 @@ $userData = getUserData(); // Предположим, что у вас есть 
 </script>
 
 
-<footer id="footer" class="footer mt-auto py-lg-7 fixed-bottom">
+<footer id="footer" class="footer mt-auto py-lg-7 bottom">
     <div class="footer-bottom py-3 text-center">
         <div class="container-lg">
             <p class="m-0">

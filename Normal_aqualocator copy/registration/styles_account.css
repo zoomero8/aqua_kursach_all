@@ -1,205 +1,209 @@
-body {
-    --heading-font: "Poppins", Georgia, serif;
-    margin-top: 60px; /* Равный высоте кнопки */
-    min-height: 300px;
-    }
-    
-    /* Style for the search form */
-    form {
-      margin: 20px auto; /* Устанавливаем отступы сверху и снизу, а также центрируем форму по горизонтали */
-      display: flex;
-      justify-content: center; /* Центрируем по горизонтали */
-      align-items: center;
-  }
-    
-    /* Enlarged and rounded search input */
-    form input[type="text"] {
-      width: 300px;
-      padding: 10px;
-      border: 2px solid #0e4bf1;
-      border-radius: 5px;
-  }
-    
-    /* Style for the search button */
-    form button {
-      padding: 10px 20px;
-      background-color: #0e4bf1;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background-color 0.3s ease-in-out;
-      margin-left: 10px;
-  }
-  form button:hover {
-    background-color: #073d7c;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  }
-    
-  /* Обновленный стиль для таблицы с закругленными краями */
-  table {
-    width: 80%; /* Устанавливаем ширину таблицы */
-    margin: 20px auto; /* Устанавливаем отступы сверху и снизу, а также центрируем таблицу по горизонтали */
-    border-collapse: collapse;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-    
-    th, td {
-      padding: 15px;
-      text-align: left;
-    }
-    
-    th {
-      background-color: var(--bs-light);
-      color: var(--bs-dark);
-    }
-    
-    /* Стиль для заголовка таблицы */
-    thead {
-      background-color: var(--bs-light);
-      border-bottom: 2px solid var(--bs-gray-200);
-    }
-    
-    /* Стиль для строк с четными номерами */
-    tbody tr:nth-child(even) {
-      background-color: var(--bs-light-rgb);
-    }
-    
-    /* Стиль для строк с нечетными номерами */
-    tbody tr:nth-child(odd) {
-      background-color: var(--bs-white-rgb);
-    }
-    
-    /* Стиль для последней строки таблицы */
-    tbody tr:last-child {
-      border-bottom-left-radius: 0; /* Используем более маленький радиус у последней строки */
-      border-bottom-right-radius: 0; /* Используем более маленький радиус у последней строки */
-  }
-    .main-button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #0e4bf1;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background-color 0.3s ease-in-out;
-      position: absolute;
-      top: 10px; /* Расстояние сверху */
-      right: 10px; /* Расстояние справа */
-  }
-  
-  .main-button:hover {
-    background-color: #073d7c;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  }
-  
-  .swim-title {
-    text-align: center;
-    color: var(--heading-color);
-    font-family: var(--heading-font);
-    font-weight: var(--heading-font-weight);
-    margin-top: 10px;
-    margin-bottom: 40px; /* Добавленный отступ снизу */
-  }
-  table a {
-    color: #313131;
-    text-decoration: none;
-    position: relative;
-    display: inline-block;
-    padding: 10px;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  /* Эффект при наведении на ссылку */
-  table a:hover {
-    color: #0e4bf1;
-  }
-  
-  table a::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background-color: #0e4bf1;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  table a:hover::before {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-  
-  .newmain-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #0e4bf1;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s ease-in-out;
-    position: absolute;
-    top: 10px; /* Расстояние сверху */
-    right: 10px; /* Расстояние справа */
-  }
-  
-  .newmain-button:hover {
-    background-color: #073d7c;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  }
-  
-  .map-main-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #0e4bf1;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s ease-in-out;
-    position: absolute;
-    top: 10px; /* Расстояние сверху */
-    left: 10px; /* Расстояние слева */
-  }
-  
-  .map-main-button:hover {
-    background-color: #073d7c;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  }
-
-  .left-column {
-    flex: 1;
-    padding: 20px;
-    box-sizing: border-box;
-    width: 40%;
-    margin-left: 5%; /* Добавлен отступ слева */
+.body-for-aquamap {
+  font-family: 'Poppins', Georgia, serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin-top: 60px; /* Равный высоте кнопки */
+  min-height: 300px;
 }
+
+/* Style for the search form */
+form {
+  margin: 20px auto; /* Устанавливаем отступы сверху и снизу, а также центрируем форму по горизонтали */
+  display: flex;
+  justify-content: center; /* Центрируем по горизонтали */
+  align-items: center;
+}
+
+/* Enlarged and rounded search input */
+form input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  border: 2px solid #0e4bf1;
+  border-radius: 5px;
+}
+
+/* Style for the search button */
+form button {
+  padding: 10px 20px;
+  background-color: #0e4bf1;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+  margin-left: 10px;
+}
+form button:hover {
+  background-color: #073d7c;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Обновленный стиль для таблицы с закругленными краями */
+table {
+  width: 80%; /* Устанавливаем ширину таблицы */
+  margin: 20px auto; /* Устанавливаем отступы сверху и снизу, а также центрируем таблицу по горизонтали */
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--bs-light);
+  color: var(--bs-dark);
+}
+
+/* Стиль для заголовка таблицы */
+thead {
+  background-color: var(--bs-light);
+  border-bottom: 2px solid var(--bs-gray-200);
+}
+
+/* Стиль для строк с четными номерами */
+tbody tr:nth-child(even) {
+  background-color: var(--bs-light-rgb);
+}
+
+/* Стиль для строк с нечетными номерами */
+tbody tr:nth-child(odd) {
+  background-color: var(--bs-white-rgb);
+}
+
+/* Стиль для последней строки таблицы */
+tbody tr:last-child {
+  border-bottom-left-radius: 0; /* Используем более маленький радиус у последней строки */
+  border-bottom-right-radius: 0; /* Используем более маленький радиус у последней строки */
+}
+.main-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0e4bf1;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+  position: absolute;
+  top: 10px; /* Расстояние сверху */
+  right: 10px; /* Расстояние справа */
+}
+
+.main-button:hover {
+  background-color: #073d7c;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.swim-title {
+  text-align: center;
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  font-weight: var(--heading-font-weight);
+  margin-top: 10px;
+  margin-bottom: 40px; /* Добавленный отступ снизу */
+}
+table a {
+  color: #313131;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Эффект при наведении на ссылку */
+table a:hover {
+  color: #0e4bf1;
+}
+
+table a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #0e4bf1;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-in-out;
+}
+
+table a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.newmain-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0e4bf1;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+  position: absolute;
+  top: 10px; /* Расстояние сверху */
+  right: 10px; /* Расстояние справа */
+}
+
+.newmain-button:hover {
+  background-color: #073d7c;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.map-main-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0e4bf1;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+  position: absolute;
+  top: 10px; /* Расстояние сверху */
+  left: 10px; /* Расстояние слева */
+}
+
+.map-main-button:hover {
+  background-color: #073d7c;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
 
 .container {
   display: flex;
-  justify-content: flex-end;
-  align-self: flex-start; /* Добавлено свойство для вертикального выравнивания вверх */
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 10px;
+  width: 80%; /* Измените значение ширины по вашему выбору */
 }
 
+.left-column,
 .right-column {
-  padding: 20px;
-  box-sizing: border-box;
+  padding: 10px;
   width: 50%;
-  margin-top: -283px; /* Замените 20px на нужное вам значение */
-  font-size: 24px; /* Замените 16px на нужное вам значение */
 }
-  
+
+.left-column,
+.right-column {
+  margin: 0 auto;
+}
+
 .swimpool-link {
   color: #000000; /* Цвет ссылки */
   text-decoration: none; /* Убрать подчеркивание ссылки */
@@ -210,5 +214,60 @@ body {
 .swimpool-link:hover {
   color: #0e4bf1; /* Новый цвет при наведении */
 }
-  
-  
+
+header {
+  background-color: #ffffff;
+  color: #000;
+  padding: 10px;
+  text-align: center;
+  width: 100% !important;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+header::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #0e4bf1;
+}
+
+.container_2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.left-button,
+.right-button,
+.nav-link {
+  background-color: transparent; /* убираем фон */
+  color: #000000; /* цвет текста */
+  padding: 15px; /* увеличенный размер кнопок */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none; /* убираем обводку при фокусировке */
+  display: inline-block;
+  transition: color 0.3s ease-in-out;
+  font-size: 16px; /* Увеличение размера шрифта */
+  text-decoration: none;
+}
+
+.left-button {
+  font-size: 25px; /* Увеличение размера шрифта */
+}
+
+.right-buttons {
+  display: flex;
+  gap: 25px;
+}
+
+.left-button:hover,
+.right-button:hover,
+.nav-link:hover {
+  color: #0a74f1;
+}
