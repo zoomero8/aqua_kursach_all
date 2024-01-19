@@ -1,6 +1,6 @@
 <?php
 // Подключаем файл dbconnector.php
-include __DIR__ . '/../aquamap/dbconnector.php';
+include __DIR__ . '/../registration/session.php';
 
 // Обработка поиска
 $search = isset($_GET['search']) ? $_GET['search'] : '';
@@ -20,7 +20,7 @@ if ($showDisabilityFriendly == 'true') {
 $itemsPerPage = 10;
 
 // Определение текущей страницы
-$page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
 // Вычисление смещения (сколько записей пропустить)
 $offset = ($page - 1) * $itemsPerPage;
@@ -43,12 +43,12 @@ if (!$result) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
+
 
     <!-- Добавляем скрипт для фильтрации по инвалидам -->
     <script>
@@ -63,11 +63,29 @@ if (!$result) {
     </script>
 </head>
 
-<body class="mt-5">
-    <a href="../aquamap/index.php" class="map-main-button">Карта</a>
-    <a href="../main/index.php" class="newmain-button">Главная</a>
+<body class="body-for-aquamap">
+    <header>
+        <div class="container">
+            <a href="../main/index.php" class="left-button">AQUA Navigator</a>
+            <div class="right-buttons">
+                <a href="../aquamap/index.php" class="right-button">Карта бассейнов</a>
+                <a href="../allswims/pools.php" class="right-button">Бассейны</a>
+                <?php
+                if (isLoggedIn()) {
+                    // Если пользователь вошел в аккаунт, отобразите кнопку "Личный кабинет" и "Выйти"
+                    echo '<a class="right-button" href="../registration/user_profile.php">Личный кабинет</a>';
+                    echo '<a class="right-button" href="../registration/logout.php">Выйти</a>';
+                } else {
+                    // Если пользователь не вошел в аккаунт, отобразите кнопки "Войти" и "Зарегистрироваться"
+                    echo '<a class="right-button" data-target="products" href="../registration/sign_main.php">Войти</a>';
+                    echo '<a class="right-button" data-target="products" href="../registration/registr_main.php">Зарегистрироваться</a>';
+                }
+                ?>
+            </div>
+        </div>
+    </header>
 
-    <h1 class="display-2 text-center mx-auto" data-aos="fade-up" data-aos-delay="200">
+    <h1 class="map-title-for-aquamap" data-aos="fade-up" data-aos-delay="200">
         Все бассейны
     </h1>
 
@@ -106,36 +124,38 @@ if (!$result) {
         }
 
         // Закрываем соединение с базой данных
+        $result->close();
         $mysql->close();
         ?>
     </table>
 
-</body>
-<div class="pagination-container">
-    <div class="pagination">
-        <?php if ($page > 1): ?>
-            <a href="?page=<?= $page - 1 ?>">Предыдущая</a>
-        <?php endif; ?>
+    <div class="pagination-container">
+        <div class="pagination">
+            <?php if ($page > 1): ?>
+                <a href="?page=<?= $page - 1 ?>">Предыдущая</a>
+            <?php endif; ?>
 
-        <?php if ($result->num_rows > 0): ?>
-            <span>Страница
-                <?= $page ?>
-            </span>
-        <?php endif; ?>
+            <?php if ($result->num_rows > 0): ?>
+                <span>Страница
+                    <?= $page ?>
+                </span>
+            <?php endif; ?>
 
-        <?php if ($result->num_rows == $itemsPerPage): ?>
-            <a href="?page=<?= $page + 1 ?>">Следующая</a>
-        <?php endif; ?>
-    </div>
-</div>
-<footer id="footer" class="footer mt-auto py-lg-7 bottom">
-    <div class="footer-bottom py-3 text-center">
-        <div class="container-lg">
-            <p class="m-0">
-                © 2024 AQUA Navigator.
-            </p>
+            <?php if ($result->num_rows == $itemsPerPage): ?>
+                <a href="?page=<?= $page + 1 ?>">Следующая</a>
+            <?php endif; ?>
         </div>
     </div>
-</footer>
+    
+    <footer id="footer" class="footer mt-auto py-lg-7 bottom">
+        <div class="footer-bottom py-3 text-center">
+            <div class="container-lg">
+                <p class="m-0">
+                    © 2024 AQUA Navigator.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
 
 </html>

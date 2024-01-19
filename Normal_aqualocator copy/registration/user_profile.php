@@ -28,10 +28,28 @@ $userData = getUserData(); // Предположим, что у вас есть 
 
 </head>
 
-<body class="mt-5">
+<body>
     <div class="left-column">
-        <a href="../main/index.php" class="newmain-button">Главная</a>
-        <a href="../aquamap/index.php" class="map-main-button">Аккаунт</a>
+    <header>
+        <div class="container">
+            <a href="../main/index.php" class="left-button">AQUA Navigator</a>
+            <div class="right-buttons">
+                <a href="../aquamap/index.php" class="right-button">Карта бассейнов</a>
+                <a href="../allswims/pools.php" class="right-button">Бассейны</a>
+                <?php
+                if (isLoggedIn()) {
+                    // Если пользователь вошел в аккаунт, отобразите кнопку "Личный кабинет" и "Выйти"
+                    echo '<a class="right-button" href="../registration/user_profile.php">Личный кабинет</a>';
+                    echo '<a class="right-button" href="../registration/logout.php">Выйти</a>';
+                } else {
+                    // Если пользователь не вошел в аккаунт, отобразите кнопки "Войти" и "Зарегистрироваться"
+                    echo '<a class="right-button" data-target="products" href="../registration/sign_main.php">Войти</a>';
+                    echo '<a class="right-button" data-target="products" href="../registration/registr_main.php">Зарегистрироваться</a>';
+                }
+                ?>
+            </div>
+        </div>
+    </header>
         <h1 class="display-2 text-center mx-auto fs-2" data-aos="fade-up" data-aos-delay="200">
             <?= htmlspecialchars($userData['name'] ?? '', ENT_QUOTES, 'UTF-8') ?>
         </h1>

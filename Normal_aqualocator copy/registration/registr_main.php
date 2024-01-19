@@ -1,3 +1,6 @@
+<?php include "session.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -6,8 +9,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AQUA Navigator</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -15,6 +16,28 @@
 </head>
 
 <body>
+
+<header>
+    <div class="container">
+      <a href="../main/index.php" class="left-button">AQUA Navigator</a>
+      <div class="right-buttons">
+        <a href="../aquamap/index.php" class="right-button">Карта бассейнов</a>
+        <a href="../allswims/pools.php" class="right-button">Бассейны</a>
+        <?php
+        if (isLoggedIn()) {
+          // Если пользователь вошел в аккаунт, отобразите кнопку "Личный кабинет" и "Выйти"
+          echo '<a class="right-button" href="../registration/user_profile.php">Личный кабинет</a>';
+          echo '<a class="right-button" href="../registration/logout.php">Выйти</a>';
+        } else {
+          // Если пользователь не вошел в аккаунт, отобразите кнопки "Войти" и "Зарегистрироваться"
+          echo '<a class="right-button" data-target="products" href="../registration/sign_main.php">Войти</a>';
+          echo '<a class="right-button" data-target="products" href="../registration/registr_main.php">Зарегистрироваться</a>';
+        }
+        ?>
+      </div>
+    </div>
+  </header>
+
   <div class="wrapper">
     <h2>Регистрация</h2>
     <form action="reg.php" method="POST" id="registrationForm">
